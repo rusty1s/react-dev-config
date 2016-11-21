@@ -23,7 +23,7 @@ switch (script) {
   default:
     const scripts = ['install', 'build', 'start', 'lint', 'test'];
 
-    console.log(clc.red(`Unknown script name "${clc.bold(script)}".`));
+    console.log(clc.red(`Unknown name "${clc.bold(script)}".`));
     process.stdout.write(`${clc.underline('Supported scripts:')} `);
     console.log(scripts.map(s => clc.green(s)).join(', '));
 
