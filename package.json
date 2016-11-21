@@ -43,6 +43,6 @@
     "babel-preset-react": "^6.16.0",
     "cli-color": "^1.1.0",
     "cross-spawn": "^5.0.1",
-    "minimist": "^1.2.0"
+    "yargs": "^6.4.0"
   }
 }
