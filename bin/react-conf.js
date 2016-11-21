@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import spawn from 'cross-spawn';
-import clc from 'cli-color';
+const spawn = require('cross-spawn');
+const clc = require('cli-color');
 
 const script = process.argv[2] || '';
 const args = process.argv.slice(3);
@@ -21,13 +21,11 @@ switch (script) {
     process.exit(result.status);
 
   default:
-    console.log(clc.red(`Unknown script name "${clc.bold(script)}".`));
+    const scripts = ['install', 'build', 'start', 'lint', 'test'];
 
-    let log = `${clc.underline('Supported scripts:')} `;
-    ['install', 'build', 'start', 'lint', 'test'].forEach(s => {
-      log += `${clc.green(s)}, `;
-    });
-    console.log(log.slice(0, -2));
+    console.log(clc.red(`Unknown script name "${clc.bold(script)}".`));
+    process.stdout.write(`${clc.underline('Supported scripts:')} `);
+    console.log(scripts.map(s => clc.green(s)).join(', '));
 
     process.exit(1);
 }
