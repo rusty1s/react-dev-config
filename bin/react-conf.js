@@ -6,26 +6,26 @@ const clc = require('cli-color');
 const script = process.argv[2] || '';
 const args = process.argv.slice(3);
 
-switch (script) {
-  case 'install':
-  case 'build':
-  case 'start':
-  case 'lint':
-  case 'test':
-    const result = spawn.sync(
-      'node',
-      [require.resolve(`../scripts/${script}`)].concat(args),
-      { stdio: 'inherit' }
-    );
+const scripts = [
+  'install',
+  'build',
+  'start',
+  'lint-scripts',
+  'lint-styles',
+  'test',
+];
 
-    process.exit(result.status);
+if (scripts.includes(script)) {
+  const result = spawn.sync('node',
+    [require.resolve(`../scripts/${script}`)].concat(args),
+  { stdio: 'inherit' });
 
-  default:
-    const scripts = ['install', 'build', 'start', 'lint', 'test'];
+  process.exit(result.status);
+} else {
+  process.stdout.write(clc.red(`Unknown name "${clc.bold(script)}".\n`));
+  process.stdout.write(`${clc.underline('Supported scripts:')} `);
+  process.stdout.write(scripts.map(s => clc.green(s)).join(', '));
+  process.stdout.write('\n');
 
-    console.log(clc.red(`Unknown name "${clc.bold(script)}".`));
-    process.stdout.write(`${clc.underline('Supported scripts:')} `);
-    console.log(scripts.map(s => clc.green(s)).join(', '));
-
-    process.exit(1);
+  process.exit(1);
 }
