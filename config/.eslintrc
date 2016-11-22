@@ -1,3 +1,14 @@
 {
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.config.js", "**/*.test.js"] }
+    ],
+    "no-param-reassign": [2, { "props": false }]
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  }
 }
