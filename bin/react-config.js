@@ -12,7 +12,7 @@ const scripts = [
   'start',
   'lint-scripts',
   'lint-styles',
-  'test',
+  // 'test',
   'svn-install',
   'svn-uninstall',
 ];
