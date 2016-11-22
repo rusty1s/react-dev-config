@@ -2,7 +2,8 @@
 
 const spawn = require('cross-spawn');
 
-const path = `${process.cwd()}/node_modules/helic-react-config/config`;
+const name = require('../package.json').name;
+const path = `${process.cwd()}/node_modules/${name}/config`;
 
 const result = spawn.sync('node', [
   `${process.cwd()}/node_modules/.bin/eslint`,
