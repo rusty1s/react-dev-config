@@ -26,8 +26,14 @@
     "name": "Matthias Fey",
     "email": "matthias.fey@tu-dortmund.de"
   },
-  "files": [],
-  "bin": [],
+  "files": [
+    "bin",
+    "scripts",
+    "config"
+  ],
+  "bin": {
+    "react-config": "bin/react-config.js"
+  },
   "man": [],
   "directories": [],
   "repository": {

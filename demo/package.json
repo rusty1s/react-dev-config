@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "devDependencies": {
+    "helic-react-config": "file:.."
+  },
+  "scripts": {
+    "postinstall": "react-config svn-install",
+    "preuninstall": "react-config svn-uninstall",
+    "lint": "react-config lint-scripts"
+  }
+}
