@@ -9,3 +9,5 @@ install:
   - bash "npm install"
 script:
   - bash "npm run lint"
+notifications:
+  email: false
