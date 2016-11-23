@@ -1,13 +1,13 @@
 # Helic React Configuration
 
-[![Build Status](build-image)](build-url)
-[![NPM Latest Version](npm-version-image)](npm-url)
-[![Dependency Status](dependency-image)](dependency-url)
-[![DevDependency Status](dev-dependency-image)](dev-dependency-url)
-![Hit Count](hit-image)
-![Contributions Welcome](contributions-image)
+[![Build Status][build-image]][build-url]
+[![NPM Latest Version][npm-version-image]][npm-url]
+[![Dependency Status][dependency-image]][dependency-url]
+[![DevDependency Status][dev-dependency-image]][dev-dependency-url]
+![Hit Count][hit-image]
+![Contributions Welcome][contributions-image]
 
-[![NPM Stats](npm-stats-image)](npm-url)
+[![NPM Stats][npm-stats-image]][npm-url]
 
 ## ToDo
 
