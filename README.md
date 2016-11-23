@@ -4,6 +4,8 @@
 [![NPM Latest Version][npm-version-image]][npm-url]
 [![Dependency Status][dependency-image]][dependency-url]
 [![DevDependency Status][dev-dependency-image]][dev-dependency-url]
+[![Code Climate][code-climate-image]][code-climate-url]
+[![Code Climate Issues][code-climate-issues-image]][code-climate-url]
 ![Hit Count][hit-image]
 ![Contributions Welcome][contributions-image]
 
@@ -29,5 +31,8 @@
 [dependency-url]: https://david-dm.org/rusty1s/helic-react-config
 [dev-dependency-image]: https://david-dm.org/rusty1s/helic-react-config/dev-status.svg
 [dev-dependency-url]: https://david-dm.org/rusty1s/helic-react-config#info=devDependencies
+[code-climate-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/gpa.svg
+[code-climate-url]: https://codeclimate.com/github/rusty1s/helic-react-config
+[code-climate-issues-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/issue_count.svg
 [hit-image]: https://hitt.herokuapp.com/rusty1s/helic-react-config.svg
 [contributions-image]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg
