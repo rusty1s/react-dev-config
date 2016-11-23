@@ -29,7 +29,8 @@
   "files": [
     "bin",
     "scripts",
-    "config"
+    "config",
+    "utils"
   ],
   "bin": {
     "react-config": "bin/react-config.js"

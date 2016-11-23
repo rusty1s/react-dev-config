@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const spawn = require('cross-spawn');
-const moduleName = require('../config/name');
+const moduleName = require('../utils/name');
 
 const path = `${process.cwd()}/node_modules/${moduleName}/config`;
 

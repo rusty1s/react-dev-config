@@ -5,7 +5,7 @@
 [![Dependency Status][dependency-image]][dependency-url]
 [![DevDependency Status][dev-dependency-image]][dev-dependency-url]
 [![Code Climate][code-climate-image]][code-climate-url]
-[![Code Climate Issues][code-climate-issues-image]][code-climate-url]
+[![Code Climate Issues][code-climate-issues-image]][code-climate-issues-url]
 [![bitHound][bit-hound-image]][bit-hound-url]
 ![Hit Count][hit-image]
 ![Contributions Welcome][contributions-image]
@@ -33,6 +33,7 @@
 [code-climate-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/gpa.svg
 [code-climate-url]: https://codeclimate.com/github/rusty1s/helic-react-config
 [code-climate-issues-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/issue_count.svg
+[code-climate-issues-url]: https://codeclimate.com/github/rusty1s/helic-react-config/issues
 [bit-hound-image]: https://www.bithound.io/github/rusty1s/helic-react-config/badges/score.svg
 [bit-hound-url]: https://www.bithound.io/github/rusty1s/helic-react-config
 [hit-image]: https://hitt.herokuapp.com/rusty1s/helic-react-config.svg
