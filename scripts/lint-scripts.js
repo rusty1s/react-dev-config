@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 
-const spawn = require('cross-spawn');
-const moduleName = require('../utils/name');
+const spawn = require('../utils/spawn');
+const configPath = require('../utils/config-path');
 
-const path = `${process.cwd()}/node_modules/${moduleName}/config`;
-
-const result = spawn.sync('node', [
-  `${process.cwd()}/node_modules/.bin/eslint`,
+const result = spawn('eslint', [
   '--config', `${path}/.eslintrc`,
   '--ignore-path', `${path}/.eslintignore`,
   '--ext', '.js,.jsx',
   '--fix',
   '.',
-], { stdio: 'inherit' });
+]);
 
 process.exit(result.status);

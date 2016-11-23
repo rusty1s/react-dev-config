@@ -1,9 +1,7 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
-const spawn = require('cross-spawn');
+const spawn = require('../utils/spawn');
 
-const result = spawn.sync('node', [
-  `${process.cwd()}/node_modules/.bin/svn-modules-uninstall`,
-], { stdio: 'inherit' });
+const result = spawn('svn-modules-uninstall');
 
 process.exit(result.status);
