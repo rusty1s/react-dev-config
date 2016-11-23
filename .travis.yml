@@ -6,8 +6,8 @@ cache:
   directories:
     - node_modules
 install:
-  - bash "npm install"
+  - npm install
 script:
-  - bash "npm run lint"
+  - npm run lint
 notifications:
   email: false
