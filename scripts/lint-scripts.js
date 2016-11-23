@@ -6,7 +6,8 @@ const configPath = require('../utils/config-path');
 const result = spawn('eslint', [
   '--config', `${configPath}/.eslintrc`,
   '--ignore-path', `${configPath}/.eslintignore`,
-  '--ext', '.js,.jsx',
+  '--ext', '.js',
+  '--ext', '.jsx',
   '--fix',
   '.',
 ]);
