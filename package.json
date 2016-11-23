@@ -44,6 +44,9 @@
   "engines": {
     "node": ">=4"
   },
+  "scripts": {
+    "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore ."
+  },
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",

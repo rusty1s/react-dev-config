@@ -9,6 +9,7 @@
 
 * Overriding default configs
 * Overriding webpack configs
+* Readme
 * Test script
 * Badges
   * Test build status

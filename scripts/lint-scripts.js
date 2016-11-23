@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const spawn = require('cross-spawn');
-
 const name = require('../package.json').name;
+
 const path = `${process.cwd()}/node_modules/${name}/config`;
 
 const result = spawn.sync('node', [
