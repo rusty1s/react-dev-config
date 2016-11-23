@@ -1,5 +1,6 @@
 # Helic React Configuration
 
+[![Build Status](https://travis-ci.org/rusty1s/helic-react-config.svg?branch=master)](https://travis-ci.org/rusty1s/helic-react-config)
 [![NPM latest version](https://img.shields.io/node/v/helic-react-config.svg?style=flat)](http://nodejs.org/download/)
 [![HitCount](https://hitt.herokuapp.com/rusty1s/helic-react-config.svg)](https://github.com/rusty1s/helic-react-config)
 
