@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const spawn = require('cross-spawn');
-const name = require('../config/name');
+const moduleName = require('../config/name');
 
-const path = `${process.cwd()}/node_modules/${name}/config`;
+const path = `${process.cwd()}/node_modules/${moduleName}/config`;
 
 const result = spawn.sync('node', [
   `${process.cwd()}/node_modules/.bin/stylelint`,
