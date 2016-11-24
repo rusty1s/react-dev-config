@@ -17,7 +17,7 @@ const scripts = [
   'svn-uninstall',
 ];
 
-if (scripts.includes(script)) {
+if (scripts.indexOf(script) >= 0) {
   const result = spawn.sync('node',
     [require.resolve(`../scripts/${script}`)].concat(args),
   { stdio: 'inherit' });
