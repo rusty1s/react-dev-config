@@ -47,8 +47,7 @@
   },
   "scripts": {
     "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
-    "test": "mocha",
-    "test-cov": "istanbul cover _mocha"
+    "test": "mocha"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
