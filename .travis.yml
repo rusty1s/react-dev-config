@@ -10,7 +10,7 @@ install:
   - npm install
 script:
   - npm run lint
-  - istanbul ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
-  - codecov
+  - npm test
+  - npm run cover
 notifications:
   email: false
