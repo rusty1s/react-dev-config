@@ -10,7 +10,7 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm test-cov
+  - npm run test-cov
 after_success:
   - codecov
 notifications:

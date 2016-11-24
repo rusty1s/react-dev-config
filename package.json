@@ -47,7 +47,7 @@
   },
   "scripts": {
     "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
-    "test": "mocha --check-leaks --harmony",
+    "test": "mocha",
     "test-cov": "istanbul cover _mocha"
   },
   "dependencies": {
