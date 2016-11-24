@@ -7,8 +7,10 @@
     ],
     "no-param-reassign": [2, { "props": false }]
   },
-  "globals": {
-    "window": true,
-    "document": true
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true,
+    "jest": true
   }
 }

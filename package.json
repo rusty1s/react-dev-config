@@ -46,7 +46,8 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore ."
+    "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
+    "test": "mocha --check-leaks --harmony"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
@@ -70,5 +71,8 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
   }
 }
