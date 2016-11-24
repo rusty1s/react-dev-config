@@ -18,9 +18,11 @@ const scripts = [
 ];
 
 if (scripts.includes(script)) {
-  spawn.sync('node',
+  const result = spawn.sync('node',
     [require.resolve(`../scripts/${script}`)].concat(args),
   { stdio: 'inherit' });
+
+  process.exitCode(result.status);
 } else {
   process.stdout.write(chalk.underline(`${MODULE_NAME}:\n`));
   process.stdout.write(chalk.bgRed('ERROR'));
@@ -28,4 +30,6 @@ if (scripts.includes(script)) {
   process.stdout.write('Supported scripts: ');
   process.stdout.write(scripts.map(s => chalk.green(s)).join(', '));
   process.stdout.write('\n');
+
+  process.exitCode = 1;
 }

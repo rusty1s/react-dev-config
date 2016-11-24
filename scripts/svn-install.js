@@ -2,4 +2,6 @@
 
 const spawn = require('../utils/spawn');
 
-spawn('svn-modules-install');
+const result = spawn('svn-modules-install');
+
+process.exitCode = result.status;

@@ -6,7 +6,5 @@ module.exports = function spawn(program, config = []) {
   ].concat(config),
   { stdio: 'inherit' });
 
-  if (result.status > 0) throw new Error(result);
-
   return result;
 };

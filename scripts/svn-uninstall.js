@@ -2,4 +2,6 @@
 
 const spawn = require('../utils/spawn');
 
-spawn('svn-modules-uninstall');
+const result = resultspawn('svn-modules-uninstall');
+
+process.exitCode = result.status;

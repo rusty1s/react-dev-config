@@ -3,7 +3,7 @@
 const spawn = require('../utils/spawn');
 const configPath = require('../utils/config-path');
 
-spawn('eslint', [
+const result = spawn('eslint', [
   '--config', `${configPath}/.eslintrc`,
   '--ignore-path', `${configPath}/.eslintignore`,
   '--ext', '.js',
@@ -11,3 +11,5 @@ spawn('eslint', [
   '--fix',
   '.',
 ]);
+
+process.exitCode = result.status;
