@@ -47,7 +47,8 @@
   },
   "scripts": {
     "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
-    "test": "mocha --check-leaks --harmony"
+    "test": "mocha --check-leaks --harmony",
+    "test-cov": "istanbul cover _mocha"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
@@ -73,6 +74,8 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.1.2"
   }
 }
