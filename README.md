@@ -7,7 +7,6 @@
 [![Peer-Dependency Status][peer-dependency-image]][peer-dependency-url]
 [![Code Climate][code-climate-image]][code-climate-url]
 [![Code Climate Issues][code-climate-issues-image]][code-climate-issues-url]
-[![bitHound][bit-hound-image]][bit-hound-url]
 
 [![NPM Stats][npm-stats-image]][npm-url]
 
