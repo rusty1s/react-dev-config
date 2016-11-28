@@ -1,3 +1,8 @@
-const tap = require('tap');
+const structure = require('../utils/structure.js');
+const expect = require('chai').expect;
 
-tap.pass('this is fine');
+describe('awdawd', () => {
+  it('wadawd', () => {
+    expect(2).to.equal(2);
+  })
+})

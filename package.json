@@ -47,8 +47,8 @@
   },
   "scripts": {
     "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
-    "test": "nyc tap test/*.js",
-    "cover": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "test": "mocha",
+    "cover": "istanbul cover _mocha && codecov"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
@@ -74,8 +74,8 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
-    "codecov": "^1.0.1",
-    "nyc": "^10.0.0",
-    "tap": "^8.0.1"
+    "chai": "^3.5.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^3.2.0"
   }
 }
