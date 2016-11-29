@@ -45,7 +45,8 @@
   },
   "config": [],
   "engines": {
-    "node": ">=4"
+    "node": ">=4",
+    "npm": ">=3"
   },
   "scripts": {
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix .",
