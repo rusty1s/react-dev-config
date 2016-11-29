@@ -7,7 +7,7 @@ node_js:
 cache:
   directories:
     - node_modules
-before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+before_install: if [[ `npm -v` == 2* ]]; then npm i -g npm@3; fi
 install:
   - npm install
   - npm run demo:install
