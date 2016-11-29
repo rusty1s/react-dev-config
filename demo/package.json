@@ -1,12 +1,19 @@
 {
   "private": true,
-  "devDependencies": {
-    "helic-react-config": "file:.."
-  },
   "scripts": {
     "postinstall": "react-config svn-install",
     "preuninstall": "react-config svn-uninstall",
     "lint-scripts": "react-config lint-scripts",
-    "lint-styles": "react-config lint-styles"
+    "lint-styles": "react-config lint-styles",
+    "build": "react-config build",
+    "start": "react-config start",
+    "test": "react-config test"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "helic-react-config": "file:.."
   }
 }
