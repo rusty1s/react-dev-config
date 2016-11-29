@@ -1,11 +1,13 @@
 engines:
-  eslint:
-    enabled: true
-    config:
-      config: config/.eslintrc
   duplication:
     enabled: true
     config:
       languages:
-        - javascript
-          mass_threshold: 40
+        javascript:
+  eslint:
+    enabled: true
+    config:
+      config: config/.eslintrc
+ratings:
+  paths:
+    - "**.js"
