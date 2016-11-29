@@ -46,7 +46,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore .",
+    "lint": "eslint --config config/.eslintrc --ignore-path config/.eslintignore --fix .",
     "test": "mocha",
     "cover": "istanbul cover _mocha && codecov"
   },

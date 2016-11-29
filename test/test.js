@@ -3,6 +3,6 @@ const expect = require('chai').expect;
 
 describe('awdawd', () => {
   it('wadawd', () => {
-    expect(2).to.equal(2);
-  })
-})
+    expect(structure.moduleName).to.equal('helic-react-config');
+  });
+});
