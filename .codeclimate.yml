@@ -6,8 +6,6 @@ engines:
         javascript:
   eslint:
     enabled: true
-    config:
-      config: "config/.eslintrc"
   fixme:
     enabled: true
   nodesecurity:
