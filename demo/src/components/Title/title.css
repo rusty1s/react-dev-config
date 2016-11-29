@@ -1,0 +1,10 @@
+@import "../../globals/color.css";
+
+.main {
+  display: block;
+  margin: 0 0 2rem;
+  color: var(--secondaryColor);
+  font-weight: 300;
+  font-size: 4.4rem;
+  line-height: 5rem;
+}

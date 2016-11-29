@@ -5,6 +5,7 @@
     "preuninstall": "react-config svn-uninstall",
     "lint-scripts": "react-config lint-scripts",
     "lint-styles": "react-config lint-styles",
+    "lint": "npm run lint-scripts && npm run lint-styles",
     "build": "react-config build",
     "start": "react-config start",
     "test": "react-config test"

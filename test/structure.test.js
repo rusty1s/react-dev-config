@@ -14,10 +14,10 @@ describe('Structure', () => {
 
   it('should find all config files', () => {
     const files = [
-      '.eslintrc',
-      '.eslintignore',
-      '.stylelintrc',
-      '.stylelintignore',
+      'eslintrc',
+      'eslintignore',
+      'stylelintrc',
+      'stylelintignore',
       'webpack.dev.config.js',
       'webpack.prod.config.js',
       'postcss.config.js',

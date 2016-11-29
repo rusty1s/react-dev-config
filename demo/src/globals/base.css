@@ -1,7 +1,7 @@
 @import "./color.css";
 
 * {
-  font-family: Roboto, serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--primaryColor);
   font-size: 1.6rem;
   line-height: 2rem;
