@@ -15,8 +15,9 @@
 ## ToDo
 
 * Build script
-* Readme
 * Test script
+* Readme
+* Travis: Run demo build and demo test
 
 [npm-version-image]: https://img.shields.io/node/v/helic-react-config.svg
 [npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true
