@@ -3,10 +3,11 @@
 const spawn = require('cross-spawn');
 const chalk = require('chalk');
 
+const { moduleName } = require('../utils/structure');
+
 const script = process.argv[2] || '';
 const args = process.argv.slice(3);
 
-const MODULE_NAME = 'helic-react-config';
 const scripts = [
   'build',
   'start',
@@ -24,9 +25,13 @@ if (scripts.indexOf(script) >= 0) {
 
   process.exitCode = result.status;
 } else {
-  process.stdout.write(chalk.underline(`${MODULE_NAME}:\n`));
+  process.stdout.write(chalk.gray(`${moduleName}`));
+  process.stdout.write(' ');
   process.stdout.write(chalk.bgRed('ERROR'));
-  process.stdout.write(` Unknown script "${chalk.red.bold(script)}".\n`);
+  process.stdout.write(` Unknown script "${chalk.red.bold(script)}".`);
+  process.stdout.write('\n');
+  process.stdout.write(chalk.gray(`${moduleName}`));
+  process.stdout.write(' ');
   process.stdout.write('Supported scripts: ');
   process.stdout.write(scripts.map(s => chalk.green(s)).join(', '));
   process.stdout.write('\n');

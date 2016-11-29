@@ -14,13 +14,13 @@ describe('Structure', () => {
 
   it('should find all config files', () => {
     const files = [
-      '.babelrc',
       '.eslintrc',
       '.eslintignore',
       '.stylelintrc',
       '.stylelintignore',
-      'webpack.config.dev.js',
-      'webpack.config.prod.js',
+      'webpack.dev.config.js',
+      'webpack.prod.config.js',
+      'postcss.config.js',
     ];
 
     const configPath = `${process.cwd()}/config`;
