@@ -50,7 +50,11 @@
   "scripts": {
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix .",
     "test": "mocha",
-    "cover": "istanbul cover _mocha && codecov"
+    "cover": "istanbul cover _mocha && codecov",
+    "demo:install": "cd demo && npm install",
+    "demo:lint": "cd demo && npm run lint",
+    "demo:test": "cd demo && npm test",
+    "demo:build": "cd demo && npm run build"
   },
   "dependencies": {
     "babel-core": "^6.18.2",

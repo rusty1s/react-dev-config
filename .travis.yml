@@ -9,10 +9,10 @@ cache:
     - node_modules
 install:
   - npm install
-  - cd demo && npm install
+  - npm run demo:install
 script:
   - npm run lint
   - npm run cover
-  - cd demo && npm run lint
+  - npm run demo:lint
 notifications:
   email: false
