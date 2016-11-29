@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const spawn = require('../utils/spawn');
-const { configPath } = require('../utils/structure');
+const configPath = require('../utils/structure').configPath;
 
 const result = spawn('eslint', [
   '--config', `${configPath}/eslintrc`,
