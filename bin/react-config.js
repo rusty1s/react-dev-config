@@ -12,7 +12,7 @@ const scripts = [
   'start',
   'lint-scripts',
   'lint-styles',
-  // 'test',
+  'test',
   'svn-install',
   'svn-uninstall',
 ];
@@ -22,7 +22,7 @@ if (scripts.indexOf(script) >= 0) {
     [require.resolve(`../scripts/${script}`)].concat(args),
   { stdio: 'inherit' });
 
-  process.exitCode(result.status);
+  process.exitCode = result.status;
 } else {
   process.stdout.write(chalk.underline(`${MODULE_NAME}:\n`));
   process.stdout.write(chalk.bgRed('ERROR'));
