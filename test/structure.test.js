@@ -24,13 +24,13 @@ describe('Structure', () => {
     ];
 
     const configPath = `${process.cwd()}/config`;
-    expect(fs.existsSync(configPath)).to.be.true;
+    expect(fs.existsSync(configPath)).to.equal(true);
 
     // check if we only find the files listed above
     expect(fs.readdirSync(configPath).length).to.be.equal(files.length);
 
-    files.forEach(file => {
-      expect(fs.existsSync(`${configPath}/${file}`)).to.be.true;
+    files.forEach((file) => {
+      expect(fs.existsSync(`${configPath}/${file}`)).to.equal(true);
     });
-  })
+  });
 });
