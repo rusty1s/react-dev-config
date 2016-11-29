@@ -14,10 +14,13 @@
 
 ## ToDo
 
-* Overriding default configs
+* Overriding script default configs
+* Overriding/adding postcss configs
 * Overriding webpack configs
 * Readme
 * Test script
+* add postcss
+* allow sass?
 
 [npm-version-image]: https://img.shields.io/node/v/helic-react-config.svg
 [npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true

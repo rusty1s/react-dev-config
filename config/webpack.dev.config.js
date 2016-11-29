@@ -1,6 +1,3 @@
-// const webpack = require('webpack');
-// const postcssConfig = require('./postcss.config');
-
 module.exports = {
   entry: [
     './src/index.jsx',
@@ -10,8 +7,9 @@ module.exports = {
     filename: 'scripts.js',
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss', '.json'],
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -21,18 +19,36 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        exclude: /node_modules/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIndentName: '[name]__[local]_[hash:base64:2]',
+              sourceMap: true,
+              localIdentName: '[name]__[local]_[hash:base64:2]',
               importLoaders: 1,
             },
           },
+          'postcss-loader',
+          // 'sass-loader',
         ],
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader',
+      },
+      {
+        exclude: [
+          /\.jsx?$/,
+          /\.s?css$/,
+          /\.json$/,
+        ],
+        use: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'static/media/[name]_[hash:8].[ext]',
+        },
       },
     ],
   },
