@@ -39,11 +39,10 @@ describe('Structure', () => {
       'postcss.config.js',
     ];
 
-    const configPath = process.cwd();
-    expect(fs.existsSync(configPath)).to.equal(true);
+    expect(fs.existsSync(process.cwd())).to.equal(true);
 
     files.forEach((file) => {
-      expect(fs.existsSync(`${configPath}/${file}`)).to.equal(true);
+      expect(fs.existsSync(`${process.cwd()}/${file}`)).to.equal(true);
     });
   });
 });
