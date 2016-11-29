@@ -3,7 +3,7 @@
 const spawn = require('cross-spawn');
 const chalk = require('chalk');
 
-const { moduleName } = require('../utils/structure');
+const moduleName = require('../utils/structure').moduleName;
 
 const script = process.argv[2] || '';
 const args = process.argv.slice(3);

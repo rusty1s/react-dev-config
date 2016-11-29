@@ -2,7 +2,7 @@
 
 const chalk = require('chalk');
 
-const { moduleName } = require('../utils/structure');
+const moduleName = require('../utils/structure').moduleName;
 
 process.stdout.write(chalk.gray(`${moduleName}`));
 process.stdout.write(' ');
