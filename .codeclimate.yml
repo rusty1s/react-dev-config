@@ -7,7 +7,14 @@ engines:
   eslint:
     enabled: true
     config:
-      config: config/.eslintrc
+      config: "config/.eslintrc"
+  fixme:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  markdownlint:
+    enabled: true
 ratings:
   paths:
     - "**.js"
+    - "**.md"
