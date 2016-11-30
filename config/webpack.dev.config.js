@@ -9,9 +9,8 @@ module.exports = {
     filename: 'scripts.js',
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.scss', '.json'],
+    extensions: ['*', '.js', '.jsx', '.css', '.json'],
   },
-  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
@@ -20,7 +19,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.s?css$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -29,6 +28,8 @@ module.exports = {
               modules: true,
               sourceMap: true,
               localIdentName: '[name]__[local]_[hash:base64:2]',
+              // That many loaders after the css-loader are used to import
+              // resources.
               importLoaders: 1,
             },
           },
@@ -42,7 +43,7 @@ module.exports = {
       {
         exclude: [
           /\.jsx?$/,
-          /\.s?css$/,
+          /\.css$/,
           /\.json$/,
         ],
         use: 'url-loader',
@@ -53,6 +54,7 @@ module.exports = {
       },
     ],
   },
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

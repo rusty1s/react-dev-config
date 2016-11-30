@@ -9,6 +9,7 @@ const result = spawn('eslint', [
   '--ext', '.js',
   '--ext', '.jsx',
   '--fix',
+  '--cache',
   '.',
 ]);
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import './globals/base.css';
+
 import App from './App';
 
-import './globals/base.css';
 
 render(
   <App />,

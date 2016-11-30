@@ -15,6 +15,7 @@ script:
   - npm run lint
   - npm run cover
   - npm run demo:lint
+  - npm run demo:build
 after_script:
   - npm run demo:uninstall
 notifications:
