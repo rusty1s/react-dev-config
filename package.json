@@ -49,7 +49,7 @@
     "npm": ">=3"
   },
   "scripts": {
-    "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix .",
+    "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix --cache .",
     "test": "mocha",
     "cover": "istanbul cover _mocha && codecov",
     "demo:install": "cd demo && npm install",

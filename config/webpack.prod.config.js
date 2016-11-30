@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const postcssConfig = require('../postcss.config.js');
+
+const cssImport = require('postcss-import');
+const cssNext = require('postcss-cssnext');
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
@@ -12,7 +14,7 @@ module.exports = {
   ],
   output: {
     path: './build',
-    filename: 'scripts.js',
+    filename: 'scripts.min.js',
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css', '.json'],
@@ -67,15 +69,12 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
-          require('postcss-import'),
-          require('postcss-cssnext'),
+          cssImport(),
+          cssNext(),
         ],
       },
     }),
-    new ExtractTextPlugin({
-      filename: 'styles.css',
-      allChunks: true,
-    }),
+    new ExtractTextPlugin('styles.min.css'),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
