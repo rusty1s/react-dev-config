@@ -2,7 +2,7 @@
 ## Bagdes
 
 [![NPM Latest Release][npm-image]][npm-url]
-[Node Version][node-version-image]
+![Node Version][node-version-image]
 
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
