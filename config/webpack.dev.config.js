@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 
+const postcssConfig = require('./postcss.config');
+
 module.exports = {
   entry: [
     './src/index.jsx',
@@ -56,6 +58,12 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: __dirname,
+        postcss: postcssConfig,
+      },
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),

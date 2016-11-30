@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const postcssConfig = require('./postcss.config');
+
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
@@ -65,18 +67,16 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
-        postcss: [
-          cssImport(),
-          cssNext(),
-        ],
+        context: __dirname,
+        postcss: postcssConfig,
       },
     }),
-    new ExtractTextPlugin('styles.min.css'),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
+    new ExtractTextPlugin('styles.min.css'),
     // Ensure the builds are consistent if source hasn't changed.
     new webpack.optimize.OccurrenceOrderPlugin(),
     // Minify the code.
