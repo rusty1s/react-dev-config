@@ -1,9 +1,9 @@
 # Helic React Configuration
 ## Bagdes
 
-[![NPM Latest Release][npm-release-image]][npm-url]
-![Node Version][node-version-image]]
-![NPM Version][npm-version-image]]
+[![NPM Latest Release][npm-image]][npm-url]
+[Node Version][node-version-image]
+[NPM Version][npm-version-image]
 
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
@@ -24,10 +24,11 @@
 * Readme
 * Travis: Run demo test
 
-[npm-version-image]: https://img.shields.io/npm/v/helic-react-config.svg
+[npm-image]: https://badge.fury.io/js/helic-react-config.svg
 [npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true
 [npm-url]: https://www.npmjs.com/package/helic-react-config
 [node-version-image]: https://img.shields.io/node/v/helic-react-config.svg
+[npm-version-image]:
 
 [build-image]: https://travis-ci.org/rusty1s/helic-react-config.svg?branch=master
 [build-url]: https://travis-ci.org/rusty1s/helic-react-config
