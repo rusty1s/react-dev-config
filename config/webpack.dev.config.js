@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.jsx',
@@ -9,7 +11,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css', '.scss', '.json'],
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
@@ -51,4 +53,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development'),
+      },
+    })
+  ],
 };
