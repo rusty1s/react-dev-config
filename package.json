@@ -53,6 +53,7 @@
     "test": "mocha",
     "cover": "istanbul cover _mocha && codecov",
     "demo:install": "cd demo && npm install",
+    "demo:uninstall": "cd demo && npm uninstall",
     "demo:lint": "cd demo && npm run lint",
     "demo:test": "cd demo && npm test",
     "demo:build": "cd demo && npm run build"
