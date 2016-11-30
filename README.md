@@ -3,7 +3,6 @@
 
 [![NPM Latest Release][npm-image]][npm-url]
 [Node Version][node-version-image]
-[NPM Version][npm-version-image]
 
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
@@ -28,7 +27,6 @@
 [npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true
 [npm-url]: https://www.npmjs.com/package/helic-react-config
 [node-version-image]: https://img.shields.io/node/v/helic-react-config.svg
-[npm-version-image]:
 
 [build-image]: https://travis-ci.org/rusty1s/helic-react-config.svg?branch=master
 [build-url]: https://travis-ci.org/rusty1s/helic-react-config
@@ -42,6 +40,6 @@
 [dependency-image]: https://david-dm.org/rusty1s/helic-react-config.svg
 [dependency-url]: https://david-dm.org/rusty1s/helic-react-config
 [dev-dependency-image]: https://david-dm.org/rusty1s/helic-react-config/dev-status.svg
-[dev-dependency-url]: https://david-dm.org/rusty1s/helic-react-config#type=dev
+[dev-dependency-url]: https://david-dm.org/rusty1s/helic-react-config?type=dev
 [peer-dependency-image]: https://david-dm.org/rusty1s/helic-react-config/peer-status.svg
-[peer-dependency-url]: https://david-dm.org/rusty1s/helic-react-config#type=peer
+[peer-dependency-url]: https://david-dm.org/rusty1s/helic-react-config?type=peer

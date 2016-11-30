@@ -1,9 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const cssImport = require('postcss-import');
-const cssNext = require('postcss-cssnext');
-
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
