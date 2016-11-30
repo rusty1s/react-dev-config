@@ -14,8 +14,9 @@
 
 ## ToDo
 
-* Build script
 * Test script
+* add vendor chunk for prod
+* add htmlwebpackplugin
 * Readme
 * Travis: Run demo build and demo test
 
