@@ -20,6 +20,7 @@ describe('Structure', () => {
       'stylelintignore',
       'webpack.dev.config.js',
       'webpack.prod.config.js',
+      'postcss.config.js'
     ];
 
     const configPath = `${process.cwd()}/config`;
@@ -36,7 +37,6 @@ describe('Structure', () => {
   it('should find all config files in the root folder', () => {
     const files = [
       '.babelrc',
-      'postcss.config.js',
     ];
 
     expect(fs.existsSync(process.cwd())).to.equal(true);
