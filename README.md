@@ -3,12 +3,10 @@
 
 [![NPM Latest Release][npm-image]][npm-url]
 ![Node Version][node-version-image]
-
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Code Climate][code-climate-image]][code-climate-url]
 [![Code Climate Issues][code-climate-issues-image]][code-climate-issues-url]
-
 [![Dependency Status][dependency-image]][dependency-url]
 [![Dev-Dependency Status][dev-dependency-image]][dev-dependency-url]
 [![Peer-Dependency Status][peer-dependency-image]][peer-dependency-url]
