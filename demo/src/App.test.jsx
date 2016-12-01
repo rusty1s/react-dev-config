@@ -11,7 +11,7 @@ test('renders without crashing', () => {
 });
 
 test('contains the right title text', () => {
-  const app = shallow(<App />);
+  // const app = shallow(<App />);
   // const title = shallow(app.find('title'));
   // console.log('render');
   // console.log(app.html());
