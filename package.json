@@ -100,5 +100,8 @@
       "node_modules",
       "demo"
     ]
+  },
+  "devDependencies": {
+    "codecov": "^1.0.1"
   }
 }
