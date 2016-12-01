@@ -5,7 +5,7 @@ module.exports = function resolveFromBasedir(path) {
   const cwd = process.cwd();
 
   // Check whether we are in the modules directory or in a module which adds
-  // this module as a dependency.
+  // this module as a dependency by reading the current working directory.
   if (regexp.test(cwd)) {
     return `${cwd}/${path}`;
   } else {
