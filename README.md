@@ -37,10 +37,11 @@ outsourced as devDependency.
 It includes:
 
 * React, JSX, and ES6 support
+* **Webpack 2**
 * A dev server with hot reloading
 * Linting via `eslint` and `stylelint`
 * Testing via `jest` and `enzyme`
-* CSS-Modules and PostCSS (with `postcss-import` and `postcss-cssnext`)
+* **CSS Modules** and **PostCSS** (with `postcss-import` and `postcss-cssnext`)
 * A build script to bundle JS, CSS and other files for production
 * Downloading private SVN modules if needed via `svn-modules`
 
