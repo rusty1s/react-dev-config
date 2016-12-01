@@ -3,7 +3,7 @@
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.config.js", "**/*.test.js", "test/**/*.js"] }
+      { "devDependencies": ["**/*.config.js", "**/*.test.js", "**/*.spec.js"] }
     ],
     "no-param-reassign": [2, { "props": false }]
   },

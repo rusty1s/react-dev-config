@@ -19,6 +19,7 @@ test('should find all config files in the config folder', () => {
     'webpack.dev.config.js',
     'webpack.prod.config.js',
     'postcss.config.js',
+    'jest',
   ];
 
   const configPath = `${process.cwd()}/config`;
