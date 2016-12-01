@@ -8,17 +8,21 @@ node_js:
 cache:
   directories:
     - node_modules
-before_install: if [[ `npm -v` == 2* ]]; then npm i -g npm@3; fi
+before_install:
+  - if [[ `npm -v` == 2* ]]; then npm install -g npm@3; fi
+  - npm install -g codecov
 install:
   - npm install
   - npm run demo:install
 script:
   - npm run lint
-  - npm run cover
+  - npm test
   - npm run demo:lint
   - npm run demo:test
   - npm run demo:build
 after_script:
   - npm run demo:uninstall
+after_success:
+  - codecov
 notifications:
   email: false

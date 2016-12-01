@@ -49,7 +49,6 @@
   "scripts": {
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix --cache --ext .js --ext .jsx .",
     "test": "jest --coverage",
-    "cover": "npm test && codecov",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",
     "demo:lint": "cd demo && npm run lint",
@@ -100,8 +99,5 @@
       "node_modules",
       "demo"
     ]
-  },
-  "devDependencies": {
-    "codecov": "^1.0.1"
   }
 }
