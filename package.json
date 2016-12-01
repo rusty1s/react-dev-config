@@ -31,7 +31,6 @@
     "scripts",
     "config",
     "utils",
-    "test",
     "mocks",
     ".babelrc"
   ],
@@ -49,7 +48,7 @@
   },
   "scripts": {
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix --cache --ext .js --ext .jsx .",
-    "test": "node --harmony node_modules/.bin/jest --config test/jest.config.json --coverage",
+    "test": "jest --coverage",
     "cover": "npm test && codecov",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",
@@ -95,5 +94,11 @@
     "enzyme": "^2.0.0",
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "demo"
+    ]
   }
 }

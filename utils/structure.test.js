@@ -8,6 +8,7 @@ test('should export correct data', () => {
 
   expect(structure.moduleName).toBe(name);
   expect(structure.configPath).toBe(config);
+  expect(structure.nodeMajorVersion).toBe(parseInt(process.version[1]));
 });
 
 test('should find all config files in the config folder', () => {
