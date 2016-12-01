@@ -5,10 +5,31 @@ const structure = require('../utils/structure.js');
 test('should export correct data', () => {
   const name = 'helic-react-config';
   const config = `${process.cwd()}/node_modules/${name}/config`;
+  const scripts = `${process.cwd()}/node_modules/${name}/scripts`;
 
   expect(structure.moduleName).toBe(name);
   expect(structure.configPath).toBe(config);
+  expect(structure.scriptsPath).toBe(scripts);
   expect(structure.nodeMajorVersion).toBe(parseInt(process.version[1], 10));
+});
+
+test('should find all script files in the scripts folder', () => {
+  const files = [
+    'eslintrc',
+    'eslintignore',
+    'stylelintrc',
+    'stylelintignore',
+    'webpack.dev.config.js',
+    'webpack.prod.config.js',
+    'postcss.config.js',
+    'jest.config.json',
+  ];
+
+  const scriptsPath = `${process.cwd()}/scripts`;
+  expect(fs.existsSync(scriptsPath)).toBeTruthy();
+
+  // check if we only find the files listed above
+  expect(fs.readdirSync(scriptsPath)).toBeEqual(files);
 });
 
 test('should find all config files in the config folder', () => {
@@ -27,11 +48,7 @@ test('should find all config files in the config folder', () => {
   expect(fs.existsSync(configPath)).toBeTruthy();
 
   // check if we only find the files listed above
-  expect(fs.readdirSync(configPath)).toHaveLength(files.length);
-
-  files.forEach((file) => {
-    expect(fs.existsSync(`${configPath}/${file}`)).toBeTruthy();
-  });
+  expect(fs.readdirSync(configPath)).toBeEqual(files);
 });
 
 test('should find all config files in the root folder', () => {
