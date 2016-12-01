@@ -3,7 +3,9 @@
 const spawn = require('../utils/spawn');
 const configPath = require('../utils/structure').configPath;
 
-const result = spawn('jest', [
+const result = spawn('node', [
+  '--harmony',
+  './node_modules/.bin/jest',
   '--config', `${configPath}/jest.config.json`,
   '--coverage',
 ]);

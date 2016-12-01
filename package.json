@@ -49,7 +49,7 @@
   },
   "scripts": {
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix --cache --ext .js --ext .jsx .",
-    "test": "jest --config test/jest.config.json --coverage",
+    "test": "node --harmony node_modules/.bin/jest --config test/jest.config.json --coverage",
     "cover": "npm test && codecov",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",

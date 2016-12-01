@@ -4,6 +4,7 @@ dist: trusty
 node_js:
   - 4
   - 6
+  - stable
 cache:
   directories:
     - node_modules
