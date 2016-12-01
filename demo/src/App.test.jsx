@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render, mount } from 'enzyme';
 
 import App from './App';
 import Title from './components/Title';
@@ -7,5 +7,18 @@ import Title from './components/Title';
 test('renders without crashing', () => {
   const app = shallow(<App />);
   expect(app.find(Title)).toHaveLength(1);
-  expect(2).toBe(2);
+});
+
+test('contains the right title text', () => {
+  const app = render(<App />);
+  console.log('render');
+  console.log(app.html());
+  // expect(app.text().toHaveLength(1);
+});
+
+test('contains the right title class', () => {
+  const app = mount(<App />);
+  console.log('mount');
+  console.log(app.html());
+  // expect(app.text().toHaveLength(1);
 });
