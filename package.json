@@ -1,7 +1,7 @@
 {
   "name": "helic-react-config",
   "version": "0.1.0",
-  "description": "Configuration and scripts for modern React apps",
+  "description": "Customizable Configuration for modern React apps",
   "keywords": [
     "configuration",
     "scripts",
@@ -31,8 +31,9 @@
     "scripts",
     "config",
     "utils",
-    ".babelrc",
-    "postcss.config.js"
+    "test",
+    "mocks",
+    ".babelrc"
   ],
   "bin": {
     "react-config": "bin/react-config.js"
@@ -47,10 +48,9 @@
     "npm": ">=3"
   },
   "scripts": {
-    "preinstall": "npm install react react-dom enzyme",
     "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --fix --cache --ext .js --ext .jsx .",
-    "test": "jest",
-    "cover": "jest --coverage && codecov",
+    "test": "jest --config test/jest.config.json --coverage",
+    "cover": "npm test && codecov",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",
     "demo:lint": "cd demo && npm run lint",
@@ -95,14 +95,5 @@
     "enzyme": "^2.0.0",
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
-  },
-  "jest": {
-    "transform": {
-      ".*": "<rootDir>/node_modules/jest-css-modules"
-    },
-    "moduleNameMapper": {
-      "\\.svg$": "<rootDir>/config/jest/fileMock.js",
-      "\\.css$": "identity-obj-proxy"
-    }
   }
 }

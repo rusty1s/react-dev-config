@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
+const spawn = require('../utils/spawn');
+const configPath = require('../utils/structure').configPath;
 
-const moduleName = require('../utils/structure').moduleName;
+const result = spawn('jest', [
+  '--config', `${configPath}/jest.config.json`,
+  '--coverage',
+]);
 
-process.stdout.write(chalk.gray(`${moduleName}`));
-process.stdout.write(' ');
-process.stdout.write(chalk.bgRed('ERROR'));
-process.stdout.write(' Test script not implemented yet.');
-process.stdout.write('\n');
-
-process.exitCode = 1;
+process.exitCode = result.status;

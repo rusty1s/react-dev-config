@@ -47,13 +47,12 @@ It includes:
 
 ## ToDo
 
-* Test script
 * add vendor chunk for prod
 * add htmlwebpackplugin
 * enzyme is a devdependency and should stay there
 * Readme
 * Test for propTypes
-* Travis: Run demo test
+* customization
 
 [npm-image]: https://badge.fury.io/js/helic-react-config.svg
 [npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true
