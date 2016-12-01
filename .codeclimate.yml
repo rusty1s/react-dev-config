@@ -15,4 +15,5 @@ engines:
 ratings:
   paths:
     - "**.js"
+    - "**.jsx"
     - "**.md"
