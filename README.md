@@ -63,7 +63,7 @@ It includes:
 * **Webpack 2**
 * A dev server with hot inline reloading
 * Linting scripts and styles with `eslint` and `stylelint`
-* Testing via `jest` and `enzyme`
+* Testing via `jest` and e.g. `enzyme`
 * **CSS Modules** and **PostCSS** (with `postcss-import` and `postcss-cssnext`)
 * A build script to bundle JS, CSS and other files for production
 * Downloading private SVN modules with `svn-modules` (if needed)
@@ -83,8 +83,8 @@ to make a pull request into the main repository.
 ## ToDo
 
 * add vendor chunk for prod
-* add polyfill to prod
 * Readme
 * Codeclimate add my babelrc
-* Allow configuration of the scripts
+* Allow watching of eslint, stylelint and testing
+* allow --fix for eslint
 * comments

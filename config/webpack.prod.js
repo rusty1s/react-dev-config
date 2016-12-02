@@ -11,6 +11,7 @@ module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
   entry: [
+    'babel-polyfill',
     './src/index.jsx',
   ],
   output: {
