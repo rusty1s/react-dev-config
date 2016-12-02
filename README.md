@@ -45,14 +45,27 @@ It includes:
 * A build script to bundle JS, CSS and other files for production
 * Downloading private SVN modules if needed via `svn-modules`
 
+## Info
+
+Running the scripts not in your root folder of your module is undefined 
+behaviour.
+
+# Contributions
+
+If you feel that your own customizations fit a lot of peoples need, feel free 
+to make a pull request into the main repository.
+Contributions welcome!
+
 ## ToDo
 
 * add vendor chunk for prod
+* resolve functions (check if dirs exists)
+* take the right folder for customizations
+* babel should move to config
 * add htmlwebpackplugin
 * enzyme is a devdependency and should stay there
 * Readme
 * Test for propTypes
-* customization
 
 [npm-image]: https://badge.fury.io/js/react-dev-config.svg
 [npm-stats-image]: https://nodei.co/npm/react-dev-config.png?downloads=true&downloadRank=true&stars=true

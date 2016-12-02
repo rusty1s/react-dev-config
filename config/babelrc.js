@@ -1,0 +1,11 @@
+module.exports = {
+  presets: [
+    ['es2015', { modules: false }],
+    'react',
+  ],
+  env: {
+    test: {
+      plugins: ['transform-es2015-modules-commonjs'],
+    },
+  },
+};

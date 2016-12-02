@@ -1,24 +1,24 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 const spawn = require('cross-spawn');
 const chalk = require('chalk');
 
-const resolve = require('../utils/resolve');
 const log = require('../utils/log');
 
 const script = process.argv[2] || '';
 const args = process.argv.slice(3);
 
 // Read the scripts folder to build the available script names.
-const scripts = fs.readdirSync(resolve('scripts'))
+const scripts = fs.readdirSync(path.resolve(__dirname, '../scripts'))
   .map(filename => filename.replace(/\..+$/, ''))
   .sort();
 
 if (scripts.indexOf(script) >= 0) {
-  // Call the found script as a child process.
+  // Call the passed script as a child process.
   const result = spawn.sync('node',
-    [resolve(`scripts/${script}.js`)].concat(args),
+    [require.resolve(`../scripts/${script}.js`)].concat(args),
   { stdio: 'inherit' });
 
   process.exitCode = result.status;

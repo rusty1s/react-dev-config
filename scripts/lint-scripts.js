@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 
+const path = require('path');
+
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
+const write = require('../utils/write');
 
-const write = require('../utils/cache');
-
-const eslintignore = require('../config/eslintignore')
+const eslintignore = require(resolve('config/eslintignore.js'))
   .reduce((prev, entry) => `${prev}\n${entry}`);
 
-write(resolve('.cache'), 'eslintignore', eslintignore);
+write(path.resolve(__dirname, '../cache'), 'eslintignore', eslintignore));
 
 const result = spawn('eslint', [
   '--config', resolve('config/eslintrc.js'),
-  '--ignore-path', resolve('.cache/eslintignore'),
+  '--ignore-path', .path.resolve(__dirname, '..cache/eslintignore'),
   '--ext', '.js',
   '--ext', '.jsx',
-  '--fix',
   '--cache',
   '.',
 ]);

@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
-const postcss = require('./postcss');
+const resolve = require('../utils/resolve');
+const postcss = require(resolve('config/postcss.js'));
 
 module.exports = {
   entry: [
@@ -61,6 +62,8 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss,
+        // We need to pass the correct context.
+        // https://github.com/webpack/webpack/issues/2684
         context: __dirname,
       },
     }),

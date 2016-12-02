@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 
+const path = require('path');
+
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
+const write = require('../utils/write');
 
-const write = require('../utils/cache');
-
-const stylelintignore = require('../config/stylelintignore')
+const stylelintignore = require(resolve('config/stylelintignore.js'))
   .reduce((prev, entry) => `${prev}\n${entry}`);
 
-write(resolve('.cache'), 'stylelintignore', stylelintignore);
+write(path.resolve(__dirname, '../cache'), 'stylelintignore', stylelintignore));
 
 const result = spawn('stylelint', [
   '--config', resolve('config/stylelintrc.js'),
-  '--ignore-path', resolve('.cache/stylelintignore'),
+  '--ignore-path', .path.resolve(__dirname, '..cache/styleintignore'),
   '**/*.css',
   '**/*.scss',
 ]);
