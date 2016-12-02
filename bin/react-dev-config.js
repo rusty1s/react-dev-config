@@ -18,7 +18,7 @@ const scripts = fs.readdirSync(resolve('scripts'))
 if (scripts.indexOf(script) >= 0) {
   // Call the found script as a child process.
   const result = spawn.sync('node',
-    [resolve(`scripts/${script}.js`), ...args],
+    [resolve(`scripts/${script}.js`)].concat(args),
   { stdio: 'inherit' });
 
   process.exitCode = result.status;

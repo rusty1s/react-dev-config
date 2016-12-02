@@ -9,8 +9,14 @@ const resolve = require('../utils/resolve');
 const version = parseInt(process.version.match(/\d/)[0], 10);
 const harmony = version < 6 ? ['--harmony_proxies'] : [];
 
+const write = require('../utils/cache');
+
+const jest = require('../config/jest');
+
+write(resolve('.cache'), 'jest.json', JSON.stringify(jest));
+
 const result = spawn('jest', [
-  '--config', resolve('config/jest.config.json'),
+  '--config', resolve('.cache/jest.json'),
   '--coverage',
 ], harmony);
 

@@ -1,6 +1,6 @@
 {
   "name": "react-dev-config",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Customizable Configuration for modern React apps",
   "keywords": [
     "development",
@@ -38,6 +38,7 @@
   "bin": {
     "react-dev-config": "bin/react-dev-config.js"
   },
+  "main": "index.js",
   "directories": [],
   "repository": {
     "type": "git",
@@ -77,6 +78,7 @@
     "jest": "^17.0.3",
     "jest-css-modules": "^1.1.0",
     "json-loader": "^0.5.4",
+    "mkdirp": "^0.5.1",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "8.1.0",
     "postcss-loader": "^1.1.1",

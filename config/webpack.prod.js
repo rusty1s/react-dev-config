@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const postcssConfig = require('./postcss.config');
+const postcss = require('./postcss');
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
@@ -67,8 +67,8 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
+        postcss,
         context: __dirname,
-        postcss: postcssConfig,
       },
     }),
     new webpack.DefinePlugin({

@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 
-const postcssConfig = require('./postcss.config');
+const postcss = require('./postcss');
 
 module.exports = {
   entry: [
@@ -60,8 +60,8 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
+        postcss,
         context: __dirname,
-        postcss: postcssConfig,
       },
     }),
     new webpack.DefinePlugin({
