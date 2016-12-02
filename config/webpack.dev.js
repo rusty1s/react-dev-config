@@ -5,12 +5,14 @@ const resolve = require('../utils/resolve');
 const postcss = require(resolve('config/postcss.js'));
 const babelrc = require(resolve('config/babelrc.js'));
 
+const publicPath = '/public';
+
 module.exports = {
   entry: [
     './src/index.jsx',
   ],
   output: {
-    publicPath: '/public',
+    publicPath: '/static',
     filename: 'scripts.js',
   },
   resolve: {

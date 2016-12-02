@@ -83,10 +83,10 @@ to make a pull request into the main repository.
 ## ToDo
 
 * add vendor chunk for prod
-* add htmlwebpackplugin
+* add htmlwebpackplugin with static path
+* webpack dev server content base is static
 * add polyfill to prod
 * Readme
-* webpack dev server should open index html direct on localhost:3000
 * Codeclimate add my babelrc
 * Allow configuration of the scripts
 * comments

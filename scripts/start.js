@@ -7,6 +7,7 @@ const resolve = require('../utils/resolve');
 const result = spawn('webpack-dev-server', [
   '--config', resolve('config/webpack.dev.js'),
   '--host', '0.0.0.0',  // bind to all hosts
+  '--content-base', 'public/',
 ]);
 
 process.exitCode = result.status;
