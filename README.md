@@ -85,10 +85,8 @@ to make a pull request into the main repository.
 * add vendor chunk for prod
 * add htmlwebpackplugin
 * add polyfill to prod
-* enzyme is a devdependency and should stay there
 * Readme
 * webpack dev server should open index html direct on localhost:3000
 * Codeclimate add my babelrc
 * Allow configuration of the scripts
-* Test for propTypes
 * comments
