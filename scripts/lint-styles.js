@@ -6,14 +6,18 @@ const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
 const write = require('../utils/write');
 
-const stylelintignore = require(resolve('config/stylelintignore.js'))
+// The `stylelintignore` file must be a simple file with entries in each row
+// just like the normal `.gitignore`. We write this file into the .cache folder
+// of the `react-dev-config` from where we can address it.
+const ignore = require(resolve('config/stylelintignore.js'))
   .reduce((prev, entry) => `${prev}\n${entry}`);
 
-write(path.resolve(__dirname, '../cache'), 'stylelintignore', stylelintignore));
+const cachePath = path.join(__dirname, '../.cache');
+const ignorePath = write(cachePath, 'stylelintignore', ignore));
 
 const result = spawn('stylelint', [
   '--config', resolve('config/stylelintrc.js'),
-  '--ignore-path', .path.resolve(__dirname, '..cache/styleintignore'),
+  '--ignore-path', ignorePath,
   '**/*.css',
   '**/*.scss',
 ]);

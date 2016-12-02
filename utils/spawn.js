@@ -1,5 +1,9 @@
 const crossSpawn = require('cross-spawn');
 
+/**
+ * Spawns a child process from the ./node_modules/.bin directory with specific
+ * arguments.
+ **/
 module.exports = function spawn(program, programArgs, nodeArgs) {
   // The required program is always in the current working directories
   // node_modules/.bin folder.
