@@ -1,4 +1,5 @@
 module.exports = {
+  collectCoverage: true,
   transform: {
     '.*': '<rootDir>/node_modules/jest-css-modules',
   },

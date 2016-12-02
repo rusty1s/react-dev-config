@@ -26,7 +26,6 @@ const babelPath = write(process.cwd(), '.babelrc', JSON.stringify(babelrc));
 
 const result = spawn('jest', [
   '--config', configPath,
-  '--coverage',
 ], harmony);
 
 // Delete created `.babelrc`.

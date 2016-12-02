@@ -91,3 +91,4 @@ to make a pull request into the main repository.
 * Codeclimate add my babelrc
 * Allow configuration of the scripts
 * Test for propTypes
+* comments

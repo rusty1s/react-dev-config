@@ -4,7 +4,16 @@ module.exports = {
     // Allow importing dev dependencies only in config or test files.
     'import/no-extraneous-dependencies': [
       2,
-      { devDependencies: ['**/*.config.js', '**/*.test.js', '**/*.spec.js'] },
+      {
+        devDependencies: [
+          '**/config/**/*',
+          '**/test/**/*',
+          '**/spec/**/*',
+          '**/*.config.*',
+          '**/*.test.*',
+          '**/*.spec.*',
+        ],
+      },
     ],
     // Allow dynamic requires at runtime.
     'import/no-dynamic-require': 0,
