@@ -48,7 +48,7 @@
     "npm": ">=3"
   },
   "scripts": {
-    "lint": "eslint --config config/eslintrc --ignore-path config/eslintignore --cache --ext .js --ext .jsx .",
+    "lint": "eslint --config config/eslintrc.js --ignore-path .gitignore --cache --ext .js --ext .jsx .",
     "test": "jest --coverage",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",

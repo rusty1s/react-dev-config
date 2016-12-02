@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const resolve = require('../utils/resolve');
+
 const postcss = require(resolve('config/postcss.js'));
 const babelrc = require(resolve('config/babelrc.js'));
 

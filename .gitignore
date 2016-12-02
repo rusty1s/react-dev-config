@@ -3,5 +3,4 @@ coverage
 demo/build
 *.log
 .eslintcache
-.cache
 .babelrc

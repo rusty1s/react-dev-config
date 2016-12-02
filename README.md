@@ -12,27 +12,27 @@
 
 [![NPM Stats][npm-stats-image]][npm-url]
 
-`create-react-app` adverties *no build configuration* and they mean it - you 
+`create-react-app` adverties *no build configuration* and they mean it - you
 cannot configure this tool.
 
-The most glaring missing piece is **CSS prepocessors**. They are not supported 
+The most glaring missing piece is **CSS prepocessors**. They are not supported
 at all. That means:
 
 * no CSS Modules
 * no PostCSS plugins
 
-If you want to add or change anything, you have to `eject`. Running `npm run 
+If you want to add or change anything, you have to `eject`. Running `npm run
 eject` spits out all the configuration files so you can edit them yourself.
 
-It's great to have this option, but if you do it your are left with all the 
-disadvantages of any other starter pack (many dependencies, config boilerplate, 
+It's great to have this option, but if you do it your are left with all the
+disadvantages of any other starter pack (many dependencies, config boilerplate,
 no ability to receive updates).
 
-With `react-dev-config` you have still most of the important advantages of 
-`create-react-app` (with a much smaller codebase), and can still configure your 
+With `react-dev-config` you have still most of the important advantages of
+`create-react-app` (with a much smaller codebase), and can still configure your
 build as you like.
 
-The `react-dev-config` configuration is meant as a great start configuration 
+The `react-dev-config` configuration is meant as a great start configuration
 outsourced as devDependency.
 It includes:
 
@@ -47,24 +47,23 @@ It includes:
 
 ## Info
 
-Running the scripts not in your root folder of your module is undefined 
+Running the scripts not in your root folder of your module is undefined
 behaviour.
 
 # Contributions
 
-If you feel that your own customizations fit a lot of peoples need, feel free 
+If you feel that your own customizations fit a lot of peoples need, feel free
 to make a pull request into the main repository.
 Contributions welcome!
 
 ## ToDo
 
 * add vendor chunk for prod
-* resolve functions (check if dirs exists)
-* take the right folder for customizations
-* babel should move to config
 * add htmlwebpackplugin
 * enzyme is a devdependency and should stay there
 * Readme
+* Codeclimate add my babelrc
+* Allow configuration of the scripts
 * Test for propTypes
 
 [npm-image]: https://badge.fury.io/js/react-dev-config.svg

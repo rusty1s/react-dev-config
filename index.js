@@ -1,5 +1,5 @@
 const eslintrc = require('./config/eslintrc');
-const eslintignore= require('./config/eslintignore');
+const eslintignore = require('./config/eslintignore');
 const stylelintrc = require('./config/stylelintrc');
 const stylelintignore = require('./config/stylelintignore');
 const webpackDev = require('./config/webpack.dev');
