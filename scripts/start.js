@@ -2,9 +2,6 @@
 
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
-const writeBabelrc = require('../utils/write-babelrc');
-
-writeBabelrc();
 
 const result = spawn('webpack-dev-server', [
   '--config', resolve('config/webpack.dev.js'),
