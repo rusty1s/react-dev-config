@@ -1,8 +1,9 @@
 {
-  "name": "helic-react-config",
+  "name": "react-dev-config",
   "version": "0.2.0",
   "description": "Customizable Configuration for modern React apps",
   "keywords": [
+    "development",
     "configuration",
     "scripts",
     "build",
@@ -18,7 +19,7 @@
     "jest"
   ],
   "bugs": {
-    "url": "https://github.com/rusty1s/helic-react-conf/issues",
+    "url": "https://github.com/rusty1s/react-dev-config/issues",
     "email": "matthias.fey@tu-dortmund.de"
   },
   "license": "MIT",
@@ -35,12 +36,12 @@
     ".babelrc"
   ],
   "bin": {
-    "react-config": "bin/react-config.js"
+    "react-dev-config": "bin/react-dev-config.js"
   },
   "directories": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rusty1s/helic-react-conf"
+    "url": "https://github.com/rusty1s/react-dev-config"
   },
   "engines": {
     "node": ">=4",

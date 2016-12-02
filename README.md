@@ -1,4 +1,4 @@
-# Helic React Configuration
+# React Development Configuration
 
 [![NPM Latest Release][npm-image]][npm-url]
 ![Node Version][node-version-image]
@@ -28,11 +28,11 @@ It's great to have this option, but if you do it your are left with all the
 disadvantages of any other starter pack (many dependencies, config boilerplate, 
 no ability to receive updates).
 
-With `helic-react-config` you have still most of the important advantages of 
+With `react-dev-config` you have still most of the important advantages of 
 `create-react-app` (with a much smaller codebase), and can still configure your 
 build as you like.
 
-The `helic-react-config` configuration is meant as a great start configuration 
+The `react-dev-config` configuration is meant as a great start configuration 
 outsourced as devDependency.
 It includes:
 
@@ -54,23 +54,23 @@ It includes:
 * Test for propTypes
 * customization
 
-[npm-image]: https://badge.fury.io/js/helic-react-config.svg
-[npm-stats-image]: https://nodei.co/npm/helic-react-config.png?downloads=true&downloadRank=true&stars=true
-[npm-url]: https://www.npmjs.com/package/helic-react-config
-[node-version-image]: https://img.shields.io/node/v/helic-react-config.svg
+[npm-image]: https://badge.fury.io/js/react-dev-config.svg
+[npm-stats-image]: https://nodei.co/npm/react-dev-config.png?downloads=true&downloadRank=true&stars=true
+[npm-url]: https://www.npmjs.com/package/react-dev-config
+[node-version-image]: https://img.shields.io/node/v/react-dev-config.svg
 
-[build-image]: https://travis-ci.org/rusty1s/helic-react-config.svg?branch=master
-[build-url]: https://travis-ci.org/rusty1s/helic-react-config
-[coverage-image]: https://img.shields.io/codecov/c/github/rusty1s/helic-react-config.svg
-[coverage-url]: https://codecov.io/github/rusty1s/helic-react-config?branch=master
-[code-climate-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/gpa.svg
-[code-climate-url]: https://codeclimate.com/github/rusty1s/helic-react-config
-[code-climate-issues-image]: https://codeclimate.com/github/rusty1s/helic-react-config/badges/issue_count.svg
-[code-climate-issues-url]: https://codeclimate.com/github/rusty1s/helic-react-config/issues
+[build-image]: https://travis-ci.org/rusty1s/react-dev-config.svg?branch=master
+[build-url]: https://travis-ci.org/rusty1s/react-dev-config
+[coverage-image]: https://img.shields.io/codecov/c/github/rusty1s/react-dev-config.svg
+[coverage-url]: https://codecov.io/github/rusty1s/react-dev-config?branch=master
+[code-climate-image]: https://codeclimate.com/github/rusty1s/react-dev-config/badges/gpa.svg
+[code-climate-url]: https://codeclimate.com/github/rusty1s/react-dev-config
+[code-climate-issues-image]: https://codeclimate.com/github/rusty1s/react-dev-config/badges/issue_count.svg
+[code-climate-issues-url]: https://codeclimate.com/github/rusty1s/react-dev-config/issues
 
-[dependency-image]: https://david-dm.org/rusty1s/helic-react-config.svg
-[dependency-url]: https://david-dm.org/rusty1s/helic-react-config
-[dev-dependency-image]: https://david-dm.org/rusty1s/helic-react-config/dev-status.svg
-[dev-dependency-url]: https://david-dm.org/rusty1s/helic-react-config?type=dev
-[peer-dependency-image]: https://david-dm.org/rusty1s/helic-react-config/peer-status.svg
-[peer-dependency-url]: https://david-dm.org/rusty1s/helic-react-config?type=peer
+[dependency-image]: https://david-dm.org/rusty1s/react-dev-config.svg
+[dependency-url]: https://david-dm.org/rusty1s/react-dev-config
+[dev-dependency-image]: https://david-dm.org/rusty1s/react-dev-config/dev-status.svg
+[dev-dependency-url]: https://david-dm.org/rusty1s/react-dev-config?type=dev
+[peer-dependency-image]: https://david-dm.org/rusty1s/react-dev-config/peer-status.svg
+[peer-dependency-url]: https://david-dm.org/rusty1s/react-dev-config?type=peer
