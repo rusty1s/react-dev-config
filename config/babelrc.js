@@ -4,8 +4,7 @@ module.exports = {
     'react',
   ],
   plugins: [
-    // Helpers for common functions such as `_extend` should be added only
-    // once.
+    // Helper for common functions such as `_extend` should be added only once.
     'transform-runtime',
   ],
   env: {
