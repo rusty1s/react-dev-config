@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const resolve = require('../utils/resolve');
 const postcss = require(resolve('config/postcss.js'));
+const babelrc = require(resolve('config/babelrc.js'));
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
@@ -24,7 +25,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: `babel-loader?${JSON.stringify(babelrc)}`,
       },
       {
         test: /\.css$/,

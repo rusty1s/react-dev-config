@@ -2,6 +2,7 @@ const webpack = require('webpack');
 
 const resolve = require('../utils/resolve');
 const postcss = require(resolve('config/postcss.js'));
+const babelrc = require(resolve('config/babelrc.js'));
 
 module.exports = {
   entry: [
@@ -19,7 +20,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: `babel-loader?${JSON.stringify(babelrc)}`,
       },
       {
         test: /\.css$/,

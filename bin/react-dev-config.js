@@ -11,7 +11,7 @@ const script = process.argv[2] || '';
 const args = process.argv.slice(3);
 
 // Read the scripts folder to build the available script names.
-const scripts = fs.readdirSync(path.resolve(__dirname, '../scripts'))
+const scripts = fs.readdirSync(path.join(__dirname, '../scripts'))
   .map(filename => filename.replace(/\..+$/, ''))
   .sort();
 

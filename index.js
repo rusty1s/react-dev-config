@@ -12,7 +12,10 @@ module.exports = {
   eslintignore,
   stylelintrc,
   stylelintignore,
-  webpackDev,
+  webpack: {
+    development: webpackDev,
+    production: webpackProd,
+  },
   webpackProd,
   postcss,
   jest,
