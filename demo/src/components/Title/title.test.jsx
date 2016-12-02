@@ -11,4 +11,4 @@ test('renders without crashing', () => {
   expect(title.text()).toBe('Dummy text');
 });
 
-// TODO: test children for null and html elements
+// test children for null and html elements

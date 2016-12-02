@@ -50,7 +50,7 @@ It includes:
 Running the scripts not in your root folder of your module is undefined
 behaviour.
 
-# Contributions
+## Contributions
 
 If you feel that your own customizations fit a lot of peoples need, feel free
 to make a pull request into the main repository.
@@ -60,6 +60,7 @@ Contributions welcome!
 
 * add vendor chunk for prod
 * add htmlwebpackplugin
+* add polyfill to prod
 * enzyme is a devdependency and should stay there
 * Readme
 * Codeclimate add my babelrc

@@ -10,8 +10,6 @@ module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
   entry: [
-    // TODO: add polyfill
-    // TODO: add vendor chunk
     './src/index.jsx',
   ],
   output: {
