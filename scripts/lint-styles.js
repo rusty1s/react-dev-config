@@ -13,7 +13,7 @@ const ignore = require(resolve('config/stylelintignore.js'))
   .reduce((prev, entry) => `${prev}\n${entry}`);
 
 const cachePath = path.join(__dirname, '../.cache');
-const ignorePath = write(cachePath, 'stylelintignore', ignore));
+const ignorePath = write(cachePath, 'stylelintignore', ignore);
 
 const result = spawn('stylelint', [
   '--config', resolve('config/stylelintrc.js'),

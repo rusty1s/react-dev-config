@@ -13,7 +13,7 @@ const ignore = require(resolve('config/eslintignore.js'))
   .reduce((prev, entry) => `${prev}\n${entry}`);
 
 const cachePath = path.join(__dirname, '../.cache');
-const ignorePath = write(cachePath, 'eslintignore', ignore));
+const ignorePath = write(cachePath, 'eslintignore', ignore);
 
 const result = spawn('eslint', [
   '--config', resolve('config/eslintrc.js'),
