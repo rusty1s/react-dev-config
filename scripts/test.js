@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const spawn = require('../utils/spawn');
-const resolveFromBaseDir = require('../utils/resolve-from-basedir');
+const resolve = require('../utils/resolve');
 
 // Proxy is enabled in Node.js v6.* by default; if you are not on Node v6.*
 // yet, make sure you invoke Jest using node --harmony_proxies
@@ -10,7 +10,7 @@ const version = parseInt(process.version.match(/\d/)[0], 10);
 const harmony = version < 6 ? ['--harmony_proxies'] : [];
 
 const result = spawn('jest', [
-  '--config', `${resolveFromBaseDir('config')}/jest.config.json`,
+  '--config', resolve('config/jest.config.json'),
   '--coverage',
 ], harmony);
 

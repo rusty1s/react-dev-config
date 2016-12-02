@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 const spawn = require('../utils/spawn');
-const configPath = require('../utils/structure').configPath;
+const resolve = require('../utils/resolve');
 
 const result = spawn('eslint', [
-  '--config', `${configPath}/eslintrc`,
-  '--ignore-path', `${configPath}/eslintignore`,
+  '--config', resolve('config/eslintrc'),
+  '--ignore-path', resolve('config/eslintignore'),
   '--ext', '.js',
   '--ext', '.jsx',
   '--fix',

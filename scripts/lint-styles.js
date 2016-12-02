@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 const spawn = require('../utils/spawn');
-const configPath = require('../utils/structure').configPath;
+const resolve = require('../utils/resolve');
 
 const result = spawn('stylelint', [
-  '--config', `${configPath}/stylelintrc`,
-  '--ignore-path', `${configPath}/stylelintignore`,
+  '--config', resolve('config/stylelintrc'),
+  '--ignore-path', resolve('config/stylelintignore'),
   '**/*.css',
   '**/*.scss',
 ]);

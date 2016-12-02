@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const spawn = require('../utils/spawn');
-const configPath = require('../utils/structure').configPath;
+const resolve = require('../utils/resolve');
 
-const result = spawn('webpack-dev-server', [
-  '--config', `${configPath}/webpack.dev.config.js`,
+const result = spawn('webpack', [
+  '--config', resolve('config/webpack.dev.config.js'),
   '--host', '0.0.0.0',  // bind to all hosts
   '--port', '3000',
   '--hot',    // switch the server to hot mode
