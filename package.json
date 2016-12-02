@@ -75,6 +75,7 @@
     "eslint-plugin-react": "^6.7.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^17.0.3",
     "jest-css-modules": "^1.1.0",

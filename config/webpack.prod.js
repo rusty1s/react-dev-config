@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const resolve = require('../utils/resolve');
 
@@ -52,6 +53,7 @@ module.exports = {
       },
       {
         exclude: [
+          /\.html?$/,   // needed for HtmlWebpackPlugin to work
           /\.jsx?$/,
           /\.css$/,
           /\.json$/,
@@ -66,6 +68,13 @@ module.exports = {
   },
   devtool: 'cheap-module-source-map',
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'template/index.html',
+      favicon: 'template/favicon.ico',
+      inject: 'body',
+      hash: true,
+      xhtml: true,
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss,

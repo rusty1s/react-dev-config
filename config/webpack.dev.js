@@ -1,18 +1,17 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const resolve = require('../utils/resolve');
 
 const postcss = require(resolve('config/postcss.js'));
 const babelrc = require(resolve('config/babelrc.js'));
 
-const publicPath = '/public';
-
 module.exports = {
   entry: [
     './src/index.jsx',
   ],
   output: {
-    publicPath: '/static',
+    publicPath: '/',
     filename: 'scripts.js',
   },
   resolve: {
@@ -49,6 +48,7 @@ module.exports = {
       },
       {
         exclude: [
+          /\.html?$/,   // needed for HtmlWebpackPlugin to work
           /\.jsx?$/,
           /\.css$/,
           /\.json$/,
@@ -69,6 +69,13 @@ module.exports = {
     open: true,       // open the url in default browser
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'template/index.html',
+      favicon: 'template/favicon.ico',
+      inject: 'body',
+      hash: true,
+      xhtml: true,
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss,
