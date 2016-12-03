@@ -8,7 +8,7 @@
     "lint": "npm run lint-scripts && npm run lint-styles",
     "build": "react-dev-config build",
     "start": "react-dev-config start",
-    "test": "react-dev-config test"
+    "test": "react-dev-config test --watch"
   },
   "dependencies": {
     "react": "^15.4.1",
