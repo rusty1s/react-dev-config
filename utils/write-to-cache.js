@@ -8,13 +8,12 @@ const fs = require('fs');
  **/
 module.exports = function writeToCache(filename, text) {
   const dir = path.join(__dirname, '../.cache');
-
-  makeDir.sync(dir);
-
   const filepath = `${dir}/${filename}`;
 
   try {
     fs.unlinkSync(filepath);
+  } catch (err) {
+    makeDir.sync(dir);
   } finally {
     fs.writeFileSync(filepath, text);
   }
