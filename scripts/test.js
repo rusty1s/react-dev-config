@@ -33,11 +33,9 @@ Options
   --watch  Watch files for changes and rerun tests related to changed files.
 `).flags;
 
-let args = [
+const args = [
   '--config', configPath,
-];
-
-if (flags.watch) args = args.concat('--watch');
+].concat(flags.watch ? ['--watch'] : []);
 
 // Run jest for testing.
 const result = spawn('jest', args, harmony);

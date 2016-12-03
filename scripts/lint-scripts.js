@@ -21,16 +21,13 @@ Options
   --fix   Autommatically fix problems.
 `).flags;
 
-let args = [
+const args = [
   '--config', resolve('config/eslintrc.js'),
   '--ignore-path', ignorePath,
   '--ext', '.js',
   '--ext', '.jsx',
   '--cache',
-];
-
-if (flags.fix) args = args.concat('--fix');
-args = args.concat('.');
+].concat(flags.fix ? ['--fix'] : []).concat(['.']);
 
 // Lint all script files with eslint.
 const result = spawn('eslint', args);
