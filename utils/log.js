@@ -1,12 +1,12 @@
 const chalk = require('chalk');
 
-const name = require('../package.json').name;
+const moduleName = require('../package.json').name;
 
 /**
  * Prepends the log text with a dark colored module info.
  **/
 function logText(text) {
-  process.stdout.write(`${chalk.gray(name)} ${text}\n`);
+  process.stdout.write(`${chalk.gray(moduleName)} ${text}\n`);
 }
 
 /**
