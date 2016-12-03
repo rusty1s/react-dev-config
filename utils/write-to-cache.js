@@ -12,6 +12,7 @@ module.exports = function writeToCache(filename, text) {
   makeDir.sync(dir);
 
   const filepath = `${dir}/${filename}`;
+  fs.unlinkSync(filepath);
   fs.writeFileSync(filepath, text);
 
   return filepath;
