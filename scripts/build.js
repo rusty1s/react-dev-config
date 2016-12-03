@@ -1,11 +1,23 @@
 #!/usr/bin/env node
 
+const meow = require('meow');
+
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
 
-// Run webpack for building the bundle for use in production.
-const result = spawn('webpack', [
+meow(`
+Usage
+  build
+
+Options
+  --help   This help text.
+`);
+
+const args = [
   '--config', resolve('config/webpack.prod.js'),
-]);
+];
+
+// Run webpack for building the bundle for use in production.
+const result = spawn('webpack', args);
 
 process.exitCode = result.status;

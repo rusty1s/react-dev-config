@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const meow = require('meow');
+
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
 const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
@@ -10,10 +12,21 @@ const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
 const ignore = require(resolve('config/stylelintignore.js'));
 const ignorePath = writeIgnoreToCache('stylelingignore', ignore);
 
-const result = spawn('stylelint', [
+meow(`
+Usage
+  lint-styles
+
+Options
+  --help   This help text.
+`);
+
+const args = [
   '--config', resolve('config/stylelintrc.js'),
   '--ignore-path', ignorePath,
   '**/*.css',
-]);
+];
+
+// Lint all style files with stylelint.
+const result = spawn('stylelint', args);
 
 process.exitCode = result.status;

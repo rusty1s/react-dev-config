@@ -4,3 +4,4 @@ demo/build
 *.log
 .eslintcache
 .babelrc
+.cache

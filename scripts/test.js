@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const meow = require('meow');
 const fs = require('fs');
 const path = require('path');
 
@@ -23,9 +24,23 @@ const babelrc = require(resolve('config/babelrc.js'));
 const babelrcPath = path.join(process.cwd(), '.babelrc');
 fs.writeFileSync(babelrcPath, JSON.stringify(babelrc));
 
-const result = spawn('jest', [
+let flags = meow(`
+Usage
+  test [options]
+
+Options
+  --help   This help text.
+  --watch  Watch files for changes and rerun tests related to changed files.
+`).flags;
+
+let args = [
   '--config', configPath,
-], harmony);
+];
+
+if (flags.watch) args = args.concat('--watch');
+
+// Run jest for testing.
+const result = spawn('jest', args, harmony);
 
 // Delete created `.babelrc`.
 fs.unlinkSync(babelrcPath);
