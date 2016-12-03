@@ -82,12 +82,12 @@ to make a pull request into the main repository.
 
 ## ToDo
 
+* tests
 * add vendor chunk for prod
-* test open
 * Readme
 * Codeclimate add my babelrc
 * Allow watching of eslint, stylelint and testing (with cli prg)
-* allow --fix for eslint
+* allow --fix for eslint (with cli prg)
 * comments in config and demo, rest should be ok
 * webpack own dir in config
 * webpack outsource duplicates
