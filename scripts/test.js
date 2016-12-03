@@ -24,7 +24,7 @@ const babelrc = require(resolve('config/babelrc.js'));
 const babelrcPath = path.join(process.cwd(), '.babelrc');
 fs.writeFileSync(babelrcPath, JSON.stringify(babelrc));
 
-let flags = meow(`
+const flags = meow(`
 Usage
   test [options]
 
