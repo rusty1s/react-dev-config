@@ -4,11 +4,13 @@
     "postinstall": "react-dev-config svn-install",
     "preuninstall": "react-dev-config svn-uninstall",
     "lint-scripts": "react-dev-config lint-scripts",
+    "lint-scripts-fix": "react-dev-config lint-scripts --fix",
     "lint-styles": "react-dev-config lint-styles",
     "lint": "npm run lint-scripts && npm run lint-styles",
     "build": "react-dev-config build",
     "start": "react-dev-config start",
-    "test": "react-dev-config test --watch"
+    "test": "react-dev-config test",
+    "test:watch": "react-dev-config test --watch"
   },
   "dependencies": {
     "react": "^15.4.1",
