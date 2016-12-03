@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const resolve = require('../utils/resolve');
 
-const postcss = require(resolve('config/postcss.js'));
 const babelrc = require(resolve('config/babelrc.js'));
+const postcss = require(resolve('config/postcss.js'));
 
 module.exports = {
   entry: [
@@ -12,13 +12,22 @@ module.exports = {
   ],
   output: {
     publicPath: '/',
-    filename: 'scripts.js',
+    filename: 'app.js',
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css', '.json'],
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',  // needs to be a loader, not use
+        query: {
+          configFile: resolve('config/eslintrc.js'),
+        },
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -78,10 +87,10 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
-        postcss,
         // We need to pass the correct context.
         // https://github.com/webpack/webpack/issues/2684
         context: __dirname,
+        postcss,
       },
     }),
     new webpack.DefinePlugin({

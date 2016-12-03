@@ -6,6 +6,7 @@ const webpackDev = require('./config/webpack.dev');
 const webpackProd = require('./config/webpack.prod');
 const postcss = require('./config/postcss');
 const jest = require('./config/jest');
+const resolve = require('./utils/resolve');
 
 module.exports = {
   eslintrc,
@@ -19,4 +20,5 @@ module.exports = {
   webpackProd,
   postcss,
   jest,
+  resolve,
 };

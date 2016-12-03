@@ -13,7 +13,7 @@ module.exports = function resolve(path) {
   // exists) or by resolving to the default file from `react-dev-config` (which
   // is placed at the top of the node_modules folder) alternatively.
   const root = `${cwd}/${path}`;
-  const nodeModules = `${cwd}/node_modules/${moudleName}/${path}`;
+  const nodeModules = `${cwd}/node_modules/${moduleName}/${path}`;
 
   // Check if the resolved path exists.
   if (fs.existsSync(root)) return root;

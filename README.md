@@ -83,11 +83,11 @@ to make a pull request into the main repository.
 ## ToDo
 
 * add vendor chunk for prod
-* add eslint-loader pre and stylelint
+* add stylelint loader
 * add bithound
 * test open
 * Readme
 * Codeclimate add my babelrc
 * Allow watching of eslint, stylelint and testing (with cli prg)
 * allow --fix for eslint
-* comments
+* comments in config and demo, rest should be ok
