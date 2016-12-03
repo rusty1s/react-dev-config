@@ -1,19 +1,14 @@
 #!/usr/bin/env node
 
-const path = require('path');
-
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
-const write = require('../utils/write');
+const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
 
 // The `eslintignore` file must be a simple file with entries in each row just
 // like the normal `.gitignore`. We write this file into the .cache folder of
 // the `react-dev-config` from where we can address it.
-const ignore = require(resolve('config/eslintignore.js'))
-  .reduce((prev, entry) => `${prev}\n${entry}`);
-
-const cachePath = path.join(__dirname, '../.cache');
-const ignorePath = write(cachePath, 'eslintignore', ignore);
+const ignore = require(resolve('config/eslintignore.js'));
+const ignorePath = writeIgnoreToCache('eslintignore', ignore);
 
 const result = spawn('eslint', [
   '--config', resolve('config/eslintrc.js'),

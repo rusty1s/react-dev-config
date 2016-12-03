@@ -1,10 +1,13 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const resolve = require('../utils/resolve');
+const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
 
 const babelrc = require(resolve('config/babelrc.js'));
 const postcss = require(resolve('config/postcss.js'));
+const stylelintignore = require(resolve('config/stylelintignore.js'));
 
 module.exports = {
   entry: [
@@ -65,7 +68,7 @@ module.exports = {
         use: 'url-loader',
         query: {
           limit: 10000,
-          name: 'static/media/[name]_[hash:8].[ext]',
+          name: 'static/[name]_[hash:8].[ext]',
         },
       },
     ],
@@ -92,6 +95,11 @@ module.exports = {
         context: __dirname,
         postcss,
       },
+    }),
+    new StyleLintPlugin({
+      configFile: resolve('config/stylelintrc.js'),
+      ignorePath: writeIgnoreToCache('stylelintignore', stylelintignore),
+      files: '**/*.css',
     }),
     new webpack.DefinePlugin({
       'process.env': {
