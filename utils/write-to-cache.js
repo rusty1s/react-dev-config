@@ -8,7 +8,7 @@ const fs = require('fs');
  **/
 module.exports = function writeToCache(filename, text) {
   const dir = path.join(__dirname, '../.cache');
-  const filepath = `${dir}/${filename}`;
+  const filepath = path.join(dir, filename);
 
   try {
     fs.unlinkSync(filepath);

@@ -1,3 +1,4 @@
+const babelrc = require('./config/babelrc');
 const eslintrc = require('./config/eslintrc');
 const eslintignore = require('./config/eslintignore');
 const stylelintrc = require('./config/stylelintrc');
@@ -13,18 +14,22 @@ const writeToCache = require('./utils/write-to-cache');
 const writeIgnoreToCache = require('./utils/write-ignore-to-cache');
 
 module.exports = {
-  eslintrc,
-  eslintignore,
-  stylelintrc,
-  stylelintignore,
-  webpack: {
-    development: webpackDev,
-    production: webpackProd,
+  config: {
+    babelrc,
+    eslintrc,
+    eslintignore,
+    stylelintrc,
+    stylelintignore,
+    webpack: {
+      development: webpackDev,
+      production: webpackProd,
+    },
+    postcss,
+    jest,
   },
-  webpackProd,
-  postcss,
-  jest,
-  resolve,
-  writeToCache,
-  writeIgnoreToCache,
+  helper: {
+    resolve,
+    writeToCache,
+    writeIgnoreToCache,
+  },
 };
