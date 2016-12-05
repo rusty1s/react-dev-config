@@ -1,3 +1,5 @@
+const path = require('path');
+
 const crossSpawn = require('cross-spawn');
 
 /**
