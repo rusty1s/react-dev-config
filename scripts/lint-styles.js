@@ -4,13 +4,13 @@ const meow = require('meow');
 
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
-const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
+const write = require('../utils/write');
 
 // The `stylelintignore` file must be a simple file with entries in each row
 // just like the normal `.gitignore`. We write this file into the .cache folder
 // of the `react-dev-config` from where we can address it.
 const ignore = require(resolve('config/stylelintignore.js'));
-const ignorePath = writeIgnoreToCache('stylelingignore', ignore);
+const ignorePath = write.ignoreToCache('stylelingignore', ignore);
 
 meow(`
 Usage

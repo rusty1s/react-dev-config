@@ -6,12 +6,12 @@ const path = require('path');
 
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');
-const writeToCache = require('../utils/write-to-cache');
+const write = require('../utils/write');
 
 // The jest config file must be a json file.  We write this file as jon into
 // the .cache folder of the `react-dev-config` from where we can address it.
 const jest = require(resolve('config/jest.js'));
-const configPath = writeToCache('jest.json', JSON.stringify(jest));
+const configPath = write.toCache('jest.json', JSON.stringify(jest));
 
 // Proxy is enabled in Node.js v6.* by default; if you are not on Node v6.*
 // yet, make sure you invoke Jest using node --harmony_proxies

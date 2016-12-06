@@ -14,7 +14,6 @@ module.exports = {
   },
   helper: {
     resolve: require('./utils/resolve'),
-    writeToCache: require('./utils/write-to-cache'),
-    writeIgnoreToCache: require('./utils/write-ignore-to-cache'),
+    write: require('./utils/write'),
   },
 };

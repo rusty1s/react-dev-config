@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const resolve = require('../utils/resolve');
-const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
+const write = require('../utils/write');
 
 const babelrc = require(resolve('config/babelrc.js'));
 const postcss = require(resolve('config/postcss.js'));
@@ -33,7 +33,7 @@ module.exports = {
     }),
     new StyleLintPlugin({
       configFile: resolve('config/stylelintrc.js'),
-      ignorePath: writeIgnoreToCache('stylelintignore', stylelintignore),
+      ignorePath: write.ignoreToCache('stylelintignore', stylelintignore),
       // allowEmptyInput: true,
       files: '**/*.css',
     }),
