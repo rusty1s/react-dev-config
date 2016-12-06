@@ -17,6 +17,8 @@ module.exports = {
     ],
     // Allow dynamic requires at runtime.
     'import/no-dynamic-require': 0,
+    // Allow requires everywhere in the code.
+    'global-require': 0,
     // Allow assigning new properties of objects passed as arguments.
     'no-param-reassign': [
       2,

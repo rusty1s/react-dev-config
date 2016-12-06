@@ -7,9 +7,15 @@ const crossSpawn = require('cross-spawn');
  * arguments.
  **/
 module.exports = function spawn(prg, prgArgs, nodeArgs) {
-  // The required program is always in the current working directories
-  // node_modules/.bin folder.
-  const prgPath = path.join(process.cwd(), 'node_modules', '.bin', prg);
+  // Find the prg in the node_modules folder.
+  const modulePath = path.join(process.cwd(), 'node_modules', prg);
+  const moduleBins = require(path.join(modulePath, 'package.json')).bin;
+
+  // `pkgBin` is either a dictionary or a string.
+  const bin = typeof moduleBins === 'string' ? moduleBins : moduleBins[prg];
+
+  // build the correct path to the program
+  const prgPath = path.join(modulePath, bin);
 
   // The arguments of a node program have the following order:
   // 1. node arguments

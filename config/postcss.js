@@ -1,7 +1,4 @@
-const cssImport = require('postcss-import');
-const cssNext = require('postcss-cssnext');
-
 module.exports = [
-  cssImport(),
-  cssNext(),
+  require('postcss-import')(),
+  require('postcss-cssnext')(),
 ];
