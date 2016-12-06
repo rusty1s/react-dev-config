@@ -14,7 +14,7 @@ const ignorePath = writeIgnoreToCache('stylelingignore', ignore);
 
 meow(`
 Usage
-  lint-styles
+  lint-styles [options]
 
 Options
   --help   This help text.

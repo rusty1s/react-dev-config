@@ -7,7 +7,7 @@ const resolve = require('../utils/resolve');
 
 meow(`
 Usage
-  build
+  build [options]
 
 Options
   --help   This help text.

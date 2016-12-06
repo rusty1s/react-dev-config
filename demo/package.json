@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "react-dev-config svn-install",
-    "preuninstall": "react-dev-config svn-uninstall",
+    "postinstall": "react-dev-config svn install",
+    "preuninstall": "react-dev-config svn uninstall",
     "lint-scripts": "react-dev-config lint-scripts",
     "lint-scripts-fix": "react-dev-config lint-scripts --fix",
     "lint-styles": "react-dev-config lint-styles",
