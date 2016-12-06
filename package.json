@@ -56,6 +56,10 @@
     "demo:test": "cd demo && npm test",
     "demo:build": "cd demo && npm run build"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-jest": "^17.0.2",
@@ -107,5 +111,8 @@
       "node_modules",
       "demo"
     ]
+  },
+  "devDependencies": {
+    "pre-commit": "^1.1.3"
   }
 }
