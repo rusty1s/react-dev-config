@@ -8,7 +8,7 @@ const common = require(resolve('config/webpack.js'));
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
-  entry: ['babel-polyfill'].concat(module.entry),
+  entry: ['babel-polyfill'].concat(common.entry),
   output: {
     path: './build',
     filename: 'app.js',
