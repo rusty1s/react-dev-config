@@ -12,11 +12,7 @@ Options
   --help   This help text.
 `);
 
-const args = [
-  'uninstall',
-];
-
 // Uninstall found svn modules (if any) with no additional arguments.
-const result = spawn('svn-modules', args);
+const result = spawn('svn-modules', ['uninstall']);
 
 process.exitCode = result.status;
