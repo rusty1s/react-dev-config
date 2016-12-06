@@ -68,11 +68,6 @@ It includes:
 * A build script to bundle JS, CSS and other files for production
 * Downloading private SVN modules with `svn-modules` (if needed)
 
-## Info
-
-Running the scripts not in your root folder of your module is undefined
-behaviour.
-
 ## Contributing ![Contributions welcome][contributing]
 
 [contributing]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg
@@ -87,6 +82,4 @@ to make a pull request into the main repository.
 * Readme
 * Codeclimate add my babelrc
 * comments in config and demo, rest should be ok
-* webpack own dir in config
-* webpack outsource duplicates
 * dependencies
