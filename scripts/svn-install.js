@@ -12,7 +12,11 @@ Options
   --help   This help text.
 `);
 
+const args = [
+  'install',
+];
+
 // Install found svn modules (if any) with no additional arguments.
-const result = spawn('svn-modules-install');
+const result = spawn('svn-modules', args);
 
 process.exitCode = result.status;
