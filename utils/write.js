@@ -23,8 +23,8 @@ function writeToCache(filename, text) {
 
 /**
  * Writes an ignore file passed as an array to a file with the format of a
- * `.gitignore` into the .cache folder at the root folder of the
- * `react-dev-config` module. Creates the necessary path if needed.
+ * `.gitignore` into the .cache folder at the root of the `react-dev-config`
+ * module. Creates the necessary path if needed.
  **/
 function writeIgnoreToCache(filename, array) {
   const ignore = array.reduce((prev, entry) => `${prev}\n${entry}`);
