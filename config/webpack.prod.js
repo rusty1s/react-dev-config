@@ -2,35 +2,18 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const common = require('./webpack');
-const resolve = require('../utils/resolve');
-
-const babelrc = require(resolve('config/babelrc.js'));
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
-  entry: ['babel-polyfill'].concat(require('./webpack').entry),
+  entry: ['babel-polyfill'].concat(module.entry),
   output: {
     path: './build',
     filename: 'app.js',
   },
   resolve: common.resolve,
   module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',  // needs to be a loader, not use
-        query: {
-          configFile: resolve('config/eslintrc.js'),
-        },
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: `babel-loader?${JSON.stringify(babelrc)}`,
-      },
+    rules: common.module.rules.concat([
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
@@ -51,24 +34,7 @@ module.exports = {
           ],
         }),
       },
-      {
-        test: /\.json$/,
-        use: 'json-loader',
-      },
-      {
-        exclude: [
-          /\.html?$/,   // needed for HtmlWebpackPlugin to work
-          /\.jsx?$/,
-          /\.css$/,
-          /\.json$/,
-        ],
-        use: 'url-loader',
-        query: {
-          limit: 10000,
-          name: 'static/[name]_[hash:8].[ext]',
-        },
-      },
-    ],
+    ]),
   },
   devtool: 'cheap-module-source-map',
   plugins: common.plugins.concat([

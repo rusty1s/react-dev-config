@@ -1,9 +1,6 @@
 const webpack = require('webpack');
 
 const common = require('./webpack');
-const resolve = require('../utils/resolve');
-
-const babelrc = require(resolve('config/babelrc.js'));
 
 module.exports = {
   entry: common.entry,
@@ -13,21 +10,7 @@ module.exports = {
   },
   resolve: common.resolve,
   module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',  // needs to be a loader, not use
-        query: {
-          configFile: resolve('config/eslintrc.js'),
-        },
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: `babel-loader?${JSON.stringify(babelrc)}`,
-      },
+    rules: common.module.rules.concat([
       {
         test: /\.css$/,
         use: [
@@ -46,24 +29,7 @@ module.exports = {
           'postcss-loader',
         ],
       },
-      {
-        test: /\.json$/,
-        use: 'json-loader',
-      },
-      {
-        exclude: [
-          /\.html?$/,   // needed for HtmlWebpackPlugin to work
-          /\.jsx?$/,
-          /\.css$/,
-          /\.json$/,
-        ],
-        use: 'url-loader',
-        query: {
-          limit: 10000,
-          name: 'static/[name]_[hash:8].[ext]',
-        },
-      },
-    ],
+    ]),
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

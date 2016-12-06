@@ -5,6 +5,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const resolve = require('../utils/resolve');
 const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
 
+const babelrc = require(resolve('config/babelrc.js'));
 const postcss = require(resolve('config/postcss.js'));
 const stylelintignore = require(resolve('config/stylelintignore.js'));
 
@@ -37,4 +38,39 @@ module.exports = {
       files: '**/*.css',
     }),
   ],
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',  // needs to be a loader, not use
+        query: {
+          configFile: resolve('config/eslintrc.js'),
+        },
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: `babel-loader?${JSON.stringify(babelrc)}`,
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader',
+      },
+      {
+        exclude: [
+          /\.html?$/,   // needed for HtmlWebpackPlugin to work
+          /\.jsx?$/,
+          /\.css$/,
+          /\.json$/,
+        ],
+        use: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'static/[name]_[hash:8].[ext]',
+        },
+      },
+    ],
+  },
 };
