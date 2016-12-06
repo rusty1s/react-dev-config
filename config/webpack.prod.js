@@ -1,14 +1,10 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
+const common = require('./webpack');
 const resolve = require('../utils/resolve');
-const writeIgnoreToCache = require('../utils/write-ignore-to-cache');
 
 const babelrc = require(resolve('config/babelrc.js'));
-const postcss = require(resolve('config/postcss.js'));
-const stylelintignore = require(resolve('config/stylelintignore.js'));
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
@@ -18,9 +14,7 @@ module.exports = {
     path: './build',
     filename: 'app.js',
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.json'],
-  },
+  resolve: common.resolve,
   module: {
     rules: [
       {
@@ -77,27 +71,7 @@ module.exports = {
     ],
   },
   devtool: 'cheap-module-source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'template/index.html',
-      favicon: 'template/favicon.ico',
-      inject: 'body',
-      hash: true,
-      xhtml: true,
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss,
-        // We need to pass the correct context.
-        // https://github.com/webpack/webpack/issues/2684
-        context: __dirname,
-      },
-    }),
-    new StyleLintPlugin({
-      configFile: resolve('config/stylelintrc.js'),
-      ignorePath: writeIgnoreToCache('stylelintignore', stylelintignore),
-      files: '**/*.css',
-    }),
+  plugins: common.plugins.concat([
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
@@ -120,5 +94,5 @@ module.exports = {
         comments: false,
       },
     }),
-  ],
+  ]),
 };
