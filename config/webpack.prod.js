@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const common = require('./webpack');
+const resolve = require('../utils/resolve');
+
+const common = require(resolve('config/webpack'));
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
