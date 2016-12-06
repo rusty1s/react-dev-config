@@ -10,9 +10,7 @@ const postcss = require(resolve('config/postcss.js'));
 const stylelintignore = require(resolve('config/stylelintignore.js'));
 
 module.exports = {
-  entry: [
-    './src/index.jsx',
-  ],
+  entry: require('./webpack/entry'),
   output: {
     publicPath: '/',
     filename: 'app.js',
