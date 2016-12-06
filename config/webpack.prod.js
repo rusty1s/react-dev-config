@@ -13,7 +13,7 @@ const stylelintignore = require(resolve('config/stylelintignore.js'));
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,
-  entry: ['babel-polyfill'].concat(require('./webpack/entry')),
+  entry: ['babel-polyfill'].concat(require('./webpack').entry),
   output: {
     path: './build',
     filename: 'app.js',
