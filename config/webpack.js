@@ -14,7 +14,7 @@ module.exports = {
     './src/index.jsx',
   ],
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.json'],
+    extensions: ['*', '.js', '.jsx', '.es6', '.css', '.json'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -42,7 +42,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.jsx?$/,
+        test: /\.jsx?$|\.es6$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',  // needs to be a loader, not use
         query: {
@@ -50,7 +50,7 @@ module.exports = {
         },
       },
       {
-        test: /\.jsx?$/,
+        test: /\.jsx?$|\.es6$/,
         exclude: /node_modules/,
         use: `babel-loader?${JSON.stringify(babelrc)}`,
       },
@@ -62,6 +62,7 @@ module.exports = {
         exclude: [
           /\.html?$/,   // needed for HtmlWebpackPlugin to work
           /\.jsx?$/,
+          /\.es6$/,
           /\.css$/,
           /\.json$/,
         ],
