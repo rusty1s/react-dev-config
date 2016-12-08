@@ -8,7 +8,7 @@ module.exports = {
     postcss: require('./config/postcss'),
     jest: require('./config/jest'),
     webpack: {
-      common: require('./config/webpack'),
+      common: require('./config/webpack.common'),
       development: require('./config/webpack.dev'),
       production: require('./config/webpack.prod'),
     },

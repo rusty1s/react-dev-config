@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 const resolve = require('../utils/resolve');
 
-const common = require(resolve('config/webpack.js'));
+const common = require(resolve('config/webpack.common.js'));
 
 module.exports = {
   entry: common.entry,

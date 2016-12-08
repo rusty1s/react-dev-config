@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const resolve = require('../utils/resolve');
 
-const common = require(resolve('config/webpack.js'));
+const common = require(resolve('config/webpack.common.js'));
 
 module.exports = {
   // Don't attempt to continue if there are any errors.
