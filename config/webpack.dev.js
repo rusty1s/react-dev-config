@@ -36,8 +36,6 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 3000,
-    hot: true,        // switch the server to hot mode
-    inline: true,     // embed the webpack-dev-server runtime into the bundle
   },
   plugins: common.plugins.concat([
     new webpack.DefinePlugin({

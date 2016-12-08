@@ -15,6 +15,8 @@ Options
 
 const args = [
   '--config', resolve('config/webpack.dev.js'),
+  '--hot',        // switch the server to hot mode
+  '--inline',     // embed the webpack-dev-server runtime into the bundle
   '--host', '0.0.0.0',  // bind to all hosts
   '--open',             // open the url in default browser
 ];
