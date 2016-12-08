@@ -1,4 +1,4 @@
-const dev = require('react-dev-config').config.webpack.development;
+const dev = require('react-dev-config')('webpack.dev');
 
 dev.devServer = {
   port: 3000,
