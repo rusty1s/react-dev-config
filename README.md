@@ -77,6 +77,7 @@ to make a pull request into the main repository.
 
 ## ToDo
 
+* warnings on npm start asset size
 * tests
 * add vendor chunk for prod
 * Readme
