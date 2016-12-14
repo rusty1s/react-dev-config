@@ -78,6 +78,7 @@ to make a pull request into the main repository.
 ## ToDo
 
 * warnings on npm start asset size
+* eslintrc for stage 2
 * tests
 * add vendor chunk for prod
 * Readme
