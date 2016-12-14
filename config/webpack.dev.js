@@ -36,7 +36,9 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 3000,
+    stats: 'minimal',
   },
+
   plugins: common.plugins.concat([
     new webpack.DefinePlugin({
       'process.env': {
