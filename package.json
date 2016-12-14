@@ -38,7 +38,6 @@
     "react-dev-config": "bin/react-dev-config.js"
   },
   "main": "index.js",
-  "directories": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/rusty1s/react-dev-config"
