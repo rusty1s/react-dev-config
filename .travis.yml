@@ -12,6 +12,7 @@ before_install:
   - if [[ `npm -v` == 2* ]]; then npm install -g npm@3; fi
   - npm install -g codecov
 install:
+  - npm install react react-dom
   - npm install
   - npm run demo:install
 script:
