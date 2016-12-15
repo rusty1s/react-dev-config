@@ -38,7 +38,6 @@ module.exports = {
     port: 3000,
     stats: 'minimal',
   },
-
   plugins: common.plugins.concat([
     new webpack.DefinePlugin({
       'process.env': {
@@ -46,4 +45,7 @@ module.exports = {
       },
     }),
   ]),
+  performance: {
+    hints: false,
+  },
 };
