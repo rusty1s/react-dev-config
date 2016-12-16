@@ -1,8 +1,9 @@
-@import "./color.css";
+@value colors: '../values/colors.css';
+@value primary, primary-contrary, background from colors;
 
 * {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--primaryColor);
+  color: primary;
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -14,10 +15,10 @@ html {
 body {
   margin: 0;
   padding: 2rem;
-  background: var(--backgroundColor);
+  background: background;
 }
 
 ::selection {
-  background: var(--primaryColor);
-  color: var(--primaryContraryColor);
+  background: primary;
+  color: primary-contrary;
 }

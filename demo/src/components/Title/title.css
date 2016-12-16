@@ -1,9 +1,10 @@
-@import "../../globals/color.css";
+@value colors: '../../values/colors.css';
+@value secondary from colors;
 
 .main {
   display: block;
   margin: 0 0 2rem;
-  color: var(--secondaryColor);
+  color: secondary;
   font-weight: 300;
   font-size: 4.4rem;
   line-height: 5rem;
