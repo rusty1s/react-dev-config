@@ -14,7 +14,7 @@ class App extends Component {
     counter: 1,
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({
       counter: this.state.counter + 1,
     });
@@ -30,7 +30,7 @@ class App extends Component {
         <img src={logo} alt="logo" className={styles.logo} />
         <div>
           <span>{counter}</span>
-          <button onClick={::this.handleClick}>Increment</button>
+          <button onClick={this.handleClick}>Increment</button>
         </div>
 
       </div>

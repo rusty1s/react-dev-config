@@ -19,11 +19,6 @@ module.exports = {
     // the es2016 property initializer syntax.
     // https://babeljs.io/docs/plugins/transform-class-properties/
     'transform-class-properties',
-
-    // Compile the new function bind operator `::` to ES5
-    // obj::func is equivalent to func.bind(obj).
-    // https://babeljs.io/docs/plugins/transform-funtion-bind/
-    'transform-function-bind',
   ],
   env: {
     // Make ES2015 imports readable for jest.
