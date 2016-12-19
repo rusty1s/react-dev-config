@@ -77,6 +77,7 @@ to make a pull request into the main repository.
 
 ## ToDo
 
+* add yarn on travis build
 * font magician doesnt work in webpack dev server on chrome
 * tests
 * add vendor chunk for prod
