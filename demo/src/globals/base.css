@@ -1,5 +1,5 @@
 @value colors: '../values/colors.css';
-@value primary, primary-contrary, background from colors;
+@value primary, primary-inverted, background from colors;
 
 * {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -20,5 +20,5 @@ body {
 
 ::selection {
   background: primary;
-  color: primary-contrary;
+  color: primary-inverted;
 }
