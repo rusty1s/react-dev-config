@@ -9,9 +9,9 @@ engines:
     channel: "eslint-3"
     config:
       config: "config/eslintrc.js"
-    extensions:
-      - .js
-      - .jsx
+      extensions:
+        - .js
+        - .jsx
   csslint:
     enabled: true
   fixme:
