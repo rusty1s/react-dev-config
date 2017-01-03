@@ -9,6 +9,8 @@ engines:
     channel: "eslint-3"
     config:
       config: "config/eslintrc.js"
+  csslint:
+    enabled: true
   fixme:
     enabled: true
   markdownlint:
