@@ -12,6 +12,11 @@ engines:
       extensions:
         - .js
         - .jsx
+    checks:
+      import/no-unresolved:
+        enabled: false
+      complexity:
+        enabled: true
   csslint:
     enabled: true
   fixme:
