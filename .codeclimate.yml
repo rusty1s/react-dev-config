@@ -19,4 +19,5 @@ ratings:
   paths:
     - "**.js"
     - "**.jsx"
+    - "**.css"
     - "**.md"
