@@ -7,8 +7,9 @@
     "lint-scripts-fix": "react-dev-config lint-scripts --fix",
     "lint-styles": "react-dev-config lint-styles",
     "lint": "npm run lint-scripts && npm run lint-styles",
-    "build": "react-dev-config build",
     "start": "react-dev-config start",
+    "watch": "react-dev-config watch",
+    "build": "react-dev-config build",
     "test": "react-dev-config test",
     "test:watch": "react-dev-config test --watch"
   },

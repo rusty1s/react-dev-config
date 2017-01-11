@@ -45,7 +45,7 @@ module.exports = {
         test: /\.jsx?$|\.es6$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',  // needs to be a loader, not use
-        query: {
+        options: {
           configFile: resolve('config/eslintrc.js'),
         },
       },
@@ -66,8 +66,8 @@ module.exports = {
           /\.css$/,
           /\.json$/,
         ],
-        use: 'url-loader',
-        query: {
+        loader: 'url-loader',
+        options: {
           limit: 10000,
           name: 'static/[name]_[hash:8].[ext]',
         },

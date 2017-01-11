@@ -7,6 +7,7 @@ const common = require(resolve('config/webpack.common.js'));
 module.exports = {
   entry: common.entry,
   output: {
+    path: './test-build',
     publicPath: '/',
     filename: 'app.js',
   },

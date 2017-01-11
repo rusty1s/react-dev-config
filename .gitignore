@@ -1,6 +1,7 @@
 node_modules
 coverage
 demo/build
+demo/test-build
 *.log
 .eslintcache
 .babelrc
