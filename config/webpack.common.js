@@ -34,7 +34,7 @@ module.exports = {
     new StyleLintPlugin({
       configFile: resolve('config/stylelintrc.js'),
       ignorePath: write.ignoreToCache('stylelintignore', stylelintignore),
-      // allowEmptyInput: true,
+      allowEmptyInput: true,
       files: '**/*.css',
     }),
   ],

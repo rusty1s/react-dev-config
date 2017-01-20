@@ -23,7 +23,7 @@ Options
 const args = [
   '--config', resolve('config/stylelintrc.js'),
   '--ignore-path', ignorePath,
-  // '--allow-empty-input',
+  '--allow-empty-input',
   '**/*.css',
 ];
 
