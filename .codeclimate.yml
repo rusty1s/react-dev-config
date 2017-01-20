@@ -19,6 +19,11 @@ engines:
         enabled: true
   csslint:
     enabled: true
+    checks:
+      known-properties:
+        enabled: false
+      errors:
+        enabled: false
   fixme:
     enabled: true
   markdownlint:
