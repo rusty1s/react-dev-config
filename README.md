@@ -35,6 +35,11 @@
 
 [why]: https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg
 
+`react-dev-config` is a react development configuration outsourced in its own
+package similiar to `create-react-app`.
+
+### Differences to `create-react-app`
+
 `create-react-app` adverties *no build configuration* and they mean it - you
 cannot configure this tool.
 
@@ -61,12 +66,107 @@ It includes:
 
 * React, JSX, and ES6 support
 * **Webpack 2**
-* A dev server with hot inline reloading
+* A dev server with hot inline reloading for JavaScript **and CSS**
 * Linting scripts and styles with `eslint` and `stylelint`
 * Testing via `jest` and e.g. `enzyme`
-* **CSS Modules** and **PostCSS** (with `postcss-import` and `postcss-cssnext`)
+* **CSS Modules** and **PostCSS** (`postcss-cssnext` and
+  `postcss-font-magician`)
 * A build script to bundle JS, CSS and other files for production
-* Downloading private SVN modules with `svn-modules` (if needed)
+* Downloading private SVN modules via `svn-modules` (if needed)
+
+## Getting Startet
+
+You can use the start configuration simply by running
+
+```bash
+npm install react-dev-config --save-dev
+```
+
+and adding the `react-dev-config` scripts to your `package.json`:
+
+```json
+"scripts": {
+  "postinstall": "react-dev-config svn install",
+  "preuninstall": "react-dev-config svn uninstall",
+  "lint-scripts": "react-dev-config lint-scripts",
+  "lint-scripts-fix": "react-dev-config lint-scripts --fix",
+  "lint-styles": "react-dev-config lint-styles",
+  "lint": "npm run lint-scripts && npm run lint-styles",
+  "start": "react-dev-config start",
+  "watch": "react-dev-config watch",
+  "build": "react-dev-config build",
+  "test": "react-dev-config test",
+  "test:watch": "react-dev-config test --watch"
+}
+```
+
+You can find a working demo in the `demo` folder.
+
+### `react-dev-config svn [install|uninstall]`
+
+Downloads and installs additional private SVN modules via
+[svn-modules](https://github.com/ewrogers/svn-modules).
+Only add these if you need them.
+
+### `react-dev-config lint-scripts [--fix]`
+
+Lints your `.js` and `.jsx` files via
+[eslint](https://github.com/eslint/eslint) based on the
+[eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+configuration.
+An additional `--fix` will automatically fix errors.
+
+### `react-dev-config lint-scripts [--fix]`
+
+Lints your `.css` files via
+[stylelint](https://github.com/stylelint/stylelint) based on the
+[stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard).
+
+### `react-dev-config [start|watch|build]`
+
+Lets you develop and build your application via
+[webpack](https://github.com/webpack/webpack) and
+[webpack-dev-server](https://github.com/webpack/webpack-dev-server).
+
+`start` starts the webpack server with hot inline reloading whereas `watch` 
+builds your files whenever a file changes.
+
+### `react-dev-config test [--watch]`
+
+Tests your application via [jest](https://github.com/facebook/jest).
+
+## Custom Configurations
+
+`react-dev-config` tries its best to give you the best starting configuration,
+but if you need to customize a specific configuration it's there to hold your
+back.
+
+You can customize all configuration files, that means: `babelrc`, `eslintrc`,
+`eslintignore`, `stylelintrc`, `stylelintignore`, `jest`, `postcss`,
+`webpack.common`, `webpack.dev` and `webpack.prod`.
+
+If you want to customize a configuration, create a file called like the one 
+from above in a `config` folder in your root directory:
+
+```bash
+mkdir config
+touch babelrc.js
+```
+
+You can choose whether you want to extend or change the given configuration or
+create a new one by yourself.
+
+If you want to extend or change a configuration, put something like this in
+your newly created file:
+
+```js
+// config/babelrc.js
+const babelrc = module.exports = require('react-dev-config/babelrc');
+
+babelrc.plugins = ['transform-react-constant-elements'];
+// If you don't want to override current plugins, write:
+// babelrc.plugins.push('transform-react-constant-elements');
+```
 
 ## Contributing ![Contributions welcome][contributing]
 
@@ -79,5 +179,4 @@ to make a pull request into the main repository.
 
 * tests
 * add vendor chunk for prod
-* Readme
-* comments in config and demo, rest should be ok
+* comments in config and demo
