@@ -61,7 +61,7 @@ With `react-dev-config` you still have the important advantages of
 build as you like.
 
 The `react-dev-config` configuration is meant as a great start configuration
-outsourced as a dev dependency.
+outsourced as a development dependency.
 It includes:
 
 * React, JSX, and ES6 support
@@ -74,7 +74,7 @@ It includes:
 * A build script to bundle JS, CSS and other files for production
 * Downloading private SVN modules via `svn-modules` (if needed)
 
-## Getting Startet
+## Getting Started
 
 You can use the start configuration simply by running
 
@@ -145,6 +145,9 @@ You can customize all configuration files, that means: `babelrc`, `eslintrc`,
 `eslintignore`, `stylelintrc`, `stylelintignore`, `jest`, `postcss`,
 `webpack.common`, `webpack.dev` and `webpack.prod`.
 
+`webpack.common` holds the configuration which are similiar in `webpack.dev`
+and `webpack.prod`.
+
 If you want to customize a configuration, create a file called like the one 
 from above in a `config` folder in your root directory:
 
@@ -167,6 +170,9 @@ babelrc.plugins = ['transform-react-constant-elements'];
 // If you don't want to override current plugins, write:
 // babelrc.plugins.push('transform-react-constant-elements');
 ```
+
+You can always look up the given configurations or create an issue if you're 
+getting stuck 😇.
 
 ## Contributing ![Contributions welcome][contributing]
 
