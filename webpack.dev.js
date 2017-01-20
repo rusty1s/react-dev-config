@@ -1,3 +1,5 @@
+const path = require('path');
+
 const webpack = require('webpack');
 
 const resolve = require('./utils/resolve');
@@ -7,7 +9,7 @@ const common = require(resolve('webpack.common.js'));
 module.exports = {
   entry: common.entry,
   output: {
-    path: './test-build',
+    path: path.join(process.cwd(), 'test-build'),
     publicPath: '/',
     filename: 'app.js',
   },
