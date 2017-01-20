@@ -167,8 +167,9 @@ your newly created file:
 const babelrc = module.exports = require('react-dev-config/babelrc');
 
 babelrc.plugins = ['transform-react-constant-elements'];
-// If you don't want to override current plugins, write:
-// babelrc.plugins.push('transform-react-constant-elements');
+
+// If you don't want to override current plugins, write this instead:
+babelrc.plugins.push('transform-react-constant-elements');
 ```
 
 You can always look up the given configurations or create an issue if you're 
