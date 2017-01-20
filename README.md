@@ -160,7 +160,7 @@ You can choose whether you want to extend or change the given configuration or
 create a new one by yourself.
 
 If you want to extend or change a configuration, put something like this in
-your newly created file:
+your newly created file
 
 ```js
 // config/babelrc.js
@@ -172,7 +172,13 @@ babelrc.plugins = ['transform-react-constant-elements'];
 babelrc.plugins.push('transform-react-constant-elements');
 ```
 
-You can always look up the given configurations or create an issue if you're 
+and dont't forget to install the plugin:
+
+```bash
+npm install babel-plugin-transform-react-constant-elements --save-dev
+```
+
+You can always look up the given configurations or create an issue if you're
 getting stuck 😇.
 
 ## Contributing ![Contributions welcome][contributing]
