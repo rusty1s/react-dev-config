@@ -10,7 +10,7 @@ const write = require('../utils/write');
 
 // The jest config file must be a json file.  We write this file as jon into
 // the .cache folder of the `react-dev-config` from where we can address it.
-const jest = require(resolve('config/jest.js'));
+const jest = require(resolve('jest.js'));
 const configPath = write.toCache('jest.json', JSON.stringify(jest));
 
 // Proxy is enabled in Node.js v6.* by default; if you are not on Node v6.*
@@ -19,8 +19,8 @@ const configPath = write.toCache('jest.json', JSON.stringify(jest));
 const version = parseInt(process.version.match(/\d/)[0], 10);
 const harmony = version < 6 ? ['--harmony_proxies'] : [];
 
-// jest needs a `.babelrc` in the root of your package folder, so we write it.
-const babelrc = require(resolve('config/babelrc.js'));
+// Jest needs a `.babelrc` in the root of your package folder, so we write it.
+const babelrc = require(resolve('babelrc.js'));
 const babelrcPath = path.join(process.cwd(), '.babelrc');
 fs.writeFileSync(babelrcPath, JSON.stringify(babelrc));
 

@@ -32,12 +32,21 @@
     "scripts",
     "config",
     "utils",
-    "__mocks__"
+    "__mocks__",
+    "babelrc.js",
+    "eslintignore.js",
+    "eslintrc.js",
+    "jest.js",
+    "postcss.js",
+    "stylelintignore.js",
+    "stylelintrc.js",
+    "webpack.common.js",
+    "webpack.dev.js",
+    "webpack.prod.js"
   ],
   "bin": {
     "react-dev-config": "bin/react-dev-config.js"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rusty1s/react-dev-config"
@@ -47,7 +56,7 @@
     "npm": ">=3"
   },
   "scripts": {
-    "lint": "eslint --config config/eslintrc.js --ignore-path .gitignore --cache --ext .js --ext .jsx .",
+    "lint": "eslint --config eslintrc.js --ignore-path .gitignore --cache --ext .js --ext .jsx .",
     "test": "jest --coverage",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",

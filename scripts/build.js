@@ -14,7 +14,7 @@ Options
 `);
 
 const args = [
-  '--config', resolve('config/webpack.prod.js'),
+  '--config', resolve('webpack.prod.js'),
 ];
 
 // Run webpack for building the bundle for use in production.

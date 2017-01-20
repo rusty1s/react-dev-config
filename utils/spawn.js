@@ -14,7 +14,7 @@ module.exports = function spawn(prg, prgArgs, nodeArgs) {
   // `pkgBin` is either a dictionary or a string.
   const bin = typeof moduleBins === 'string' ? moduleBins : moduleBins[prg];
 
-  // build the correct path to the program
+  // Build the correct path to the program.
   const prgPath = path.join(modulePath, bin);
 
   // The arguments of a node program have the following order:

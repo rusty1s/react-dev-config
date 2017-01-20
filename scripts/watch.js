@@ -14,7 +14,7 @@ Options
 `);
 
 const args = [
-  '--config', resolve('config/webpack.dev.js'),
+  '--config', resolve('webpack.dev.js'),
   '--watch',
 ];
 

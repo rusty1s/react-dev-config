@@ -9,7 +9,7 @@ const write = require('../utils/write');
 // The `eslintignore` file must be a simple file with entries in each row just
 // like the normal `.gitignore`. We write this file into the .cache folder of
 // the `react-dev-config` from where we can address it.
-const ignore = require(resolve('config/eslintignore.js'));
+const ignore = require(resolve('eslintignore.js'));
 const ignorePath = write.ignoreToCache('eslintignore', ignore);
 
 const flags = meow(`
@@ -22,7 +22,7 @@ Options
 `).flags;
 
 const args = [
-  '--config', resolve('config/eslintrc.js'),
+  '--config', resolve('eslintrc.js'),
   '--ignore-path', ignorePath,
   '--ext', '.js',
   '--ext', '.jsx',

@@ -2,12 +2,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const resolve = require('../utils/resolve');
-const write = require('../utils/write');
+const resolve = require('./utils/resolve');
+const write = require('./utils/write');
 
-const babelrc = require(resolve('config/babelrc.js'));
-const postcss = require(resolve('config/postcss.js'));
-const stylelintignore = require(resolve('config/stylelintignore.js'));
+const babelrc = require(resolve('babelrc.js'));
+const postcss = require(resolve('postcss.js'));
+const stylelintignore = require(resolve('stylelintignore.js'));
 
 module.exports = {
   entry: [
@@ -32,7 +32,7 @@ module.exports = {
       },
     }),
     new StyleLintPlugin({
-      configFile: resolve('config/stylelintrc.js'),
+      configFile: resolve('stylelintrc.js'),
       ignorePath: write.ignoreToCache('stylelintignore', stylelintignore),
       allowEmptyInput: true,
       files: '**/*.css',
@@ -46,7 +46,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader',  // needs to be a loader, not use
         options: {
-          configFile: resolve('config/eslintrc.js'),
+          configFile: resolve('eslintrc.js'),
         },
       },
       {
