@@ -153,7 +153,7 @@ from above in a `config` folder in your root directory:
 
 ```bash
 mkdir config
-touch babelrc.js
+touch config/babelrc.js
 ```
 
 You can choose whether you want to extend or change the given configuration or
