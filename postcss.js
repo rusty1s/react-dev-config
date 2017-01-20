@@ -1,4 +1,6 @@
 module.exports = [
   require('postcss-cssnext')(),
-  require('postcss-font-magician')(),
+  require('postcss-font-magician')({
+    protocal: 'https:',
+  }),
 ];

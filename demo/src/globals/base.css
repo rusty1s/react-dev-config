@@ -1,8 +1,13 @@
 @value colors: '../values/colors.css';
 @value primary, primary-inverted, background from colors;
 
-* {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+*,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: Roboto, serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: primary;
   font-size: 1.6rem;
   line-height: 2rem;

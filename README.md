@@ -77,7 +77,6 @@ to make a pull request into the main repository.
 
 ## ToDo
 
-* font magician doesnt work in webpack dev server on chrome
 * tests
 * add vendor chunk for prod
 * Readme
