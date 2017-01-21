@@ -188,9 +188,3 @@ getting stuck 😇.
 
 If you feel that your own customizations fit a lot of peoples need, feel free
 to make a pull request into the main repository.
-
-## ToDo
-
-* tests
-* add vendor chunk for prod
-* comments in config and demo
