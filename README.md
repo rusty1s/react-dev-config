@@ -116,7 +116,7 @@ Lints your `.js` and `.jsx` files via
 configuration.
 An additional `--fix` will automatically fix errors.
 
-### `react-dev-config lint-scripts [--fix]`
+### `react-dev-config lint-styles`
 
 Lints your `.css` files via
 [stylelint](https://github.com/stylelint/stylelint) based on the
