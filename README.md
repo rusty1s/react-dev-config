@@ -128,7 +128,7 @@ Lets you develop and build your application via
 [webpack](https://github.com/webpack/webpack) and
 [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
 
-`start` starts the webpack server with hot inline reloading whereas `watch` 
+`start` starts the webpack server with hot inline reloading whereas `watch`
 builds your files whenever a file changes.
 
 ### `react-dev-config test [--watch]`
@@ -148,10 +148,11 @@ You can customize all configuration files, that means: `babelrc`, `eslintrc`,
 `webpack.common` holds the configuration which are similiar in `webpack.dev`
 and `webpack.prod`.
 
-If you want to customize a configuration, create a file called like the one 
+If you want to customize a configuration, create a file called like the one
 from above in a `config` folder in your root directory:
 
 ```bash
+cd project
 mkdir config
 touch config/babelrc.js
 ```
@@ -160,7 +161,7 @@ You can choose whether you want to extend or change the given configuration or
 create a new one by yourself.
 
 If you want to extend or change a configuration, put something like this in
-your newly created file
+your newly created file:
 
 ```js
 // config/babelrc.js
@@ -172,7 +173,7 @@ babelrc.plugins = ['transform-react-constant-elements'];
 babelrc.plugins.push('transform-react-constant-elements');
 ```
 
-and dont't forget to install the plugin:
+Dont't forget to install the babel plugin:
 
 ```bash
 npm install babel-plugin-transform-react-constant-elements --save-dev
