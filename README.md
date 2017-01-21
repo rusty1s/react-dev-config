@@ -64,7 +64,7 @@ The `react-dev-config` configuration is meant as a great start configuration
 outsourced as a development dependency.
 It includes:
 
-* React, JSX, and ES6 support
+* React, JSX and ES6 support
 * **Webpack 2**
 * A dev server with hot inline reloading for JavaScript **and CSS**
 * Linting scripts and styles with `eslint` and `stylelint`
