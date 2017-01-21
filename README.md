@@ -89,7 +89,7 @@ and adding the `react-dev-config` scripts to your `package.json`:
   "postinstall": "react-dev-config svn install",
   "preuninstall": "react-dev-config svn uninstall",
   "lint-scripts": "react-dev-config lint-scripts",
-  "lint-scripts-fix": "react-dev-config lint-scripts --fix",
+  "lint-scripts:fix": "react-dev-config lint-scripts --fix",
   "lint-styles": "react-dev-config lint-styles",
   "lint": "npm run lint-scripts && npm run lint-styles",
   "start": "react-dev-config start",
