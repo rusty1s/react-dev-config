@@ -10,8 +10,3 @@ test('renders without crashing', () => {
   expect(title.hasClass('main')).toBeTruthy();
   expect(title.text()).toBe('Dummy text');
 });
-
-test('excepts only one prop type', () => {
-  expect(Object.keys(Title.propTypes)).toHaveLength(1);
-  expect(Title.propTypes.children).toBeDefined();
-});
