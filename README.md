@@ -173,7 +173,7 @@ babelrc.plugins = ['transform-react-constant-elements'];
 babelrc.plugins.push('transform-react-constant-elements');
 ```
 
-Dont't forget to install the babel plugin:
+Don't forget to install the babel plugin:
 
 ```bash
 npm install babel-plugin-transform-react-constant-elements --save-dev
