@@ -8,6 +8,6 @@ import './globals/base.css';
 import App from './App';
 
 render(
-  <App title={'Hello, World!'} />,
+  <App />,
   document.getElementById('root'),
 );

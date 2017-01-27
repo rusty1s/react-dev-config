@@ -1,17 +1,14 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Title from './components/Title';
+import Button from './components/Button';
 import logo from './logo.svg';
 
 import styles from './App.css';
 
 class App extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-  }
-
   state = {
-    counter: 1,
+    counter: 0,
   }
 
   handleClick = () => {
@@ -21,18 +18,15 @@ class App extends Component {
   }
 
   render() {
-    const { title } = this.props;
-    const { counter } = this.state;
-
     return (
       <div>
-        <Title>{title}</Title>
+        <Title text="Hello, World!" />
         <img src={logo} alt="logo" className={styles.logo} />
-        <div>
-          <span>{counter}</span>
-          <button onClick={this.handleClick}>Increment</button>
-        </div>
-
+        <p>This is a simple, basic React demo!</p>
+        <Button
+          text={`Increment me: ${this.state.counter}`}
+          onClick={this.handleClick}
+        />
       </div>
     );
   }
