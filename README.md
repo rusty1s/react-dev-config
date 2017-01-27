@@ -128,8 +128,8 @@ Lets you develop and build your application via
 [webpack](https://github.com/webpack/webpack) and
 [webpack-dev-server](https://github.com/webpack/webpack-dev-server).
 
-`start` starts the webpack server with hot inline reloading whereas `watch`
-builds your files whenever a file changes.
+`start` starts the webpack server at `localhost:3000` with hot inline
+reloading whereas `watch` builds your files whenever a file changes.
 
 ### `react-dev-config test [--watch]`
 
@@ -173,7 +173,7 @@ babelrc.plugins = ['transform-react-constant-elements'];
 babelrc.plugins.push('transform-react-constant-elements');
 ```
 
-Don't forget to install the babel plugin:
+Don't forget to install the babel plugin by yourself:
 
 ```bash
 npm install babel-plugin-transform-react-constant-elements --save-dev
