@@ -102,7 +102,7 @@ and adding the `react-dev-config` scripts to your `package.json`:
 
 You can find a working demo in the `demo` folder.
 
-### `react-dev-config svn [install|uninstall]`
+### `react-dev-config svn install|uninstall`
 
 Downloads and installs additional private SVN modules via
 [svn-modules](https://github.com/ewrogers/svn-modules).
@@ -122,7 +122,7 @@ Lints your `.css` files via
 [stylelint](https://github.com/stylelint/stylelint) based on the
 [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard).
 
-### `react-dev-config [start|watch|build]`
+### `react-dev-config start|watch|build`
 
 Lets you develop and build your application via
 [webpack](https://github.com/webpack/webpack) and
