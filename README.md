@@ -187,4 +187,4 @@ getting stuck 😇.
 [contributing]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg
 
 If you feel that your own customizations fit a lot of peoples need, feel free
-to make a pull request into the main repository.
+to make a pull request.
