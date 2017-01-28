@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "enzyme": "^2.6.0",
-    "react-dev-config": "file:..",
-    "sinon": "^1.17.6"
+    "react-dev-config": "file:.."
   }
 }
