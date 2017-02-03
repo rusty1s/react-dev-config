@@ -25,41 +25,41 @@ switch (cli.input[0]) {
     // The `eslintignore` file must be a simple file with entries in each row
     // just like the normal `.gitignore`. We write this file into the .cache
     // folder of the `react-dev-config` from where we can address it.
-    const ignore = require(resolve('eslintignore.js'));
-    const ignorePath = write.ignoreToCache('eslintignore', ignore);
+    const ignoreJS = require(resolve('eslintignore.js'));
+    const ignoreJSPath = write.ignoreToCache('eslintignore', ignoreJS);
 
-    const args = [
+    const eslintArgs = [
       '--config', resolve('eslintrc.js'),
-      '--ignore-path', ignorePath,
+      '--ignore-path', ignoreJSPath,
       '--ext', '.js',
       '--ext', '.jsx',
       '--cache',
     ].concat(cli.flags.fix ? ['--fix'] : []).concat(['.']);
 
     // Lint all js files with eslint.
-    const result = spawn('eslint', args);
+    const eslintResult = spawn('eslint', eslintArgs);
 
-    process.exitCode = result.status;
+    process.exitCode = eslintResult.status;
     break;
   }
   case 'css': {
     // The `stylelintignore` file must be a simple file with entries in each
     // row just like the normal `.gitignore`. We write this file into the
     // .cache folder of the `react-dev-config` from where we can address it.
-    const ignore = require(resolve('stylelintignore.js'));
-    const ignorePath = write.ignoreToCache('stylelintignore', ignore);
+    const ignoreCSS = require(resolve('stylelintignore.js'));
+    const ignoreCSSPath = write.ignoreToCache('stylelintignore', ignoreCSS);
 
-    const args = [
+    const stylelintArgs = [
       '--config', resolve('stylelintrc.js'),
-      '--ignore-path', ignorePath,
+      '--ignore-path', ignoreCSSPath,
       '--allow-empty-input',
       '**/*.css',
     ];
 
     // Lint all css files with stylelint.
-    const result = spawn('stylelint', args);
+    const stylelintResult = spawn('stylelint', stylelintArgs);
 
-    process.exitCode = result.status;
+    process.exitCode = stylelintResult.status;
     break;
   }
   default: {
