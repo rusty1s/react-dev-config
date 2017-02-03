@@ -24,18 +24,18 @@ const babelrc = require(resolve('babelrc.js'));
 const babelrcPath = path.join(process.cwd(), '.babelrc');
 fs.writeFileSync(babelrcPath, JSON.stringify(babelrc));
 
-const flags = meow(`
+const cli = meow(`
 Usage
   test [options]
 
 Options
   --help   This help text.
   --watch  Watch files for changes and rerun tests related to changed files.
-`).flags;
+`);
 
 const args = [
   '--config', configPath,
-].concat(flags.watch ? ['--watch'] : []);
+].concat(cli.flags.watch ? ['--watch'] : []);
 
 // Run jest for testing.
 const result = spawn('jest', args, harmony);

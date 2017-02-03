@@ -1,6 +1,6 @@
 {
   "name": "react-dev-config",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Customizable Configuration for modern React apps",
   "keywords": [
     "development",
@@ -99,6 +99,7 @@
     "json-loader": "^0.5.4",
     "meow": "^3.7.0",
     "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.0.1",
     "postcss-cssnext": "^2.9.0",
     "postcss-font-magician": "^1.5.0",
     "postcss-loader": "^1.1.1",
@@ -107,7 +108,7 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-css-modules": "^0.1.0",
-    "stylelint-config-standard": "^15.0.0",
+    "stylelint-config-standard": "^16.0.0",
     "stylelint-webpack-plugin": "^0.5.1",
     "svn-modules": "^0.1.8",
     "url-loader": "^0.5.7",

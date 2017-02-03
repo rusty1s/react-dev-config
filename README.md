@@ -88,15 +88,15 @@ and adding the `react-dev-config` scripts to your `package.json`:
 "scripts": {
   "postinstall": "react-dev-config svn install",
   "preuninstall": "react-dev-config svn uninstall",
-  "lint-scripts": "react-dev-config lint-scripts",
-  "lint-scripts:fix": "react-dev-config lint-scripts --fix",
-  "lint-styles": "react-dev-config lint-styles",
-  "lint": "npm run lint-scripts && npm run lint-styles",
+  "lint:js": "react-dev-config lint js",
+  "lint:js:fix": "npm run lint:js -- --fix",
+  "lint:css": "react-dev-config lint css",
+  "lint": "npm-run-all lint:*",
   "start": "react-dev-config start",
   "watch": "react-dev-config watch",
   "build": "react-dev-config build",
   "test": "react-dev-config test",
-  "test:watch": "react-dev-config test --watch"
+  "test:watch": "npm test -- --watch"
 }
 ```
 
@@ -108,17 +108,15 @@ Downloads and installs additional private SVN modules via
 [svn-modules](https://github.com/ewrogers/svn-modules).
 Only add these if you need them.
 
-### `react-dev-config lint-scripts [--fix]`
+### `react-dev-config lint js|css [--fix]`
 
-Lints your `.js` and `.jsx` files via
+`lint js` lints your `.js` and `.jsx` files via
 [eslint](https://github.com/eslint/eslint) based on the
 [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
 configuration.
 An additional `--fix` will automatically fix errors.
 
-### `react-dev-config lint-styles`
-
-Lints your `.css` files via
+`lint css` lints your `.css` files via
 [stylelint](https://github.com/stylelint/stylelint) based on the
 [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard).
 
