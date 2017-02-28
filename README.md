@@ -95,6 +95,7 @@ and adding the `react-dev-config` scripts to your `package.json`:
   "start": "react-dev-config start",
   "watch": "react-dev-config watch",
   "build": "react-dev-config build",
+  "build": "react-dev-config transpile src --output dist",
   "test": "react-dev-config test",
   "test:watch": "npm test -- --watch"
 }
@@ -128,6 +129,11 @@ Lets you develop and build your application via
 
 `start` starts the webpack server at `localhost:3000` with hot inline
 reloading whereas `watch` builds your files whenever a file changes.
+
+### `react-dev-config transpile <input> [--output]`
+
+Transpiles your code using [Babels Command Line
+Interface](http://babeljs.io/docs/usage/cli/).
 
 ### `react-dev-config test [--watch]`
 

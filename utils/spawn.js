@@ -6,13 +6,13 @@ const crossSpawn = require('cross-spawn');
  * Spawns a child process from the ./node_modules/.bin directory with specific
  * arguments.
  **/
-module.exports = function spawn(prg, prgArgs, nodeArgs) {
+module.exports = function spawn(prg, prgArgs, nodeArgs, prgBin) {
   // Find the prg in the node_modules folder.
   const modulePath = path.join(process.cwd(), 'node_modules', prg);
   const moduleBins = require(path.join(modulePath, 'package.json')).bin;
 
   // `pkgBin` is either a dictionary or a string.
-  const bin = typeof moduleBins === 'string' ? moduleBins : moduleBins[prg];
+  const bin = typeof moduleBins === 'string' ? moduleBins : moduleBins[prgBin || prg];
 
   // Build the correct path to the program.
   const prgPath = path.join(modulePath, bin);

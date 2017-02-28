@@ -21,6 +21,7 @@ script:
   - npm run demo:lint
   - npm run demo:test
   - npm run demo:build
+  - npm run demo:transpile
 after_script:
   - npm run demo:uninstall
 after_success:

@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const meow = require('meow');
 const fs = require('fs');
 const path = require('path');
+
+const meow = require('meow');
 
 const spawn = require('../utils/spawn');
 const resolve = require('../utils/resolve');

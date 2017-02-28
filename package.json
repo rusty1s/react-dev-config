@@ -62,13 +62,15 @@
     "demo:uninstall": "cd demo && npm uninstall",
     "demo:lint": "cd demo && npm run lint",
     "demo:test": "cd demo && npm test",
-    "demo:build": "cd demo && npm run build"
+    "demo:build": "cd demo && npm run build",
+    "demo:transpile": "cd demo && npm run transpile"
   },
   "pre-commit": [
     "lint",
     "test"
   ],
   "dependencies": {
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^18.0.0",
