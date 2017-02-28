@@ -95,7 +95,7 @@ and adding the `react-dev-config` scripts to your `package.json`:
   "start": "react-dev-config start",
   "watch": "react-dev-config watch",
   "build": "react-dev-config build",
-  "build": "react-dev-config transpile src --output dist",
+  "transpile": "react-dev-config transpile src --output dist",
   "test": "react-dev-config test",
   "test:watch": "npm test -- --watch"
 }
