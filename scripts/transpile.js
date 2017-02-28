@@ -27,7 +27,7 @@ Options
 
 const args = [
   cli.input[0] || 'src',
-].concat(cli.flags.output ? ['--out-dir', cli.flats.output] : ['--out-dir', 'dist']);
+].concat(cli.flags.output ? ['--out-dir', cli.flags.output] : ['--out-dir', 'dist']);
 
 // Run webpack for building the bundle for use in production.
 const result = spawn('babel-cli', args, null, 'babel');
