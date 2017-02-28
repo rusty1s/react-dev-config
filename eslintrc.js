@@ -10,6 +10,7 @@ module.exports = {
           '**/config/**/*',
           '**/test/**/*',
           '**/spec/**/*',
+          '**/demo/**/*',
           '**/*.config.*',
           '**/*.test.*',
           '**/*.spec.*',
