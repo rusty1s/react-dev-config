@@ -20,14 +20,14 @@ test('renders without crashing', () => {
 
   expect(app.find('div Button')).toHaveLength(1);
   const button = app.find('div Button').first().render();
-  expect(button.text()).toBe('Increment me: 0');
+  expect(button.text()).toBe('Increment me: 1');
 });
 
 test('increments when clicked', () => {
   const app = shallow(<App />);
-  expect(app.find('Button').first().render().text()).toBe('Increment me: 0');
-  app.find('Button').simulate('click');
   expect(app.find('Button').first().render().text()).toBe('Increment me: 1');
   app.find('Button').simulate('click');
   expect(app.find('Button').first().render().text()).toBe('Increment me: 2');
+  app.find('Button').simulate('click');
+  expect(app.find('Button').first().render().text()).toBe('Increment me: 3');
 });
