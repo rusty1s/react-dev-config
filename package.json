@@ -131,6 +131,7 @@
     "testRegex": "\\.test\\.jsx?$"
   },
   "devDependencies": {
+    "postcss-import": "^9.1.0",
     "pre-commit": "^1.2.2",
     "pre-push": "^0.1.1"
   }

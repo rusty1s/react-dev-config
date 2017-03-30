@@ -1,5 +1,4 @@
-@value colors: '../values/colors.css';
-@value primary, primary-inverted, background from colors;
+@import './theme';
 
 *,
 button,
@@ -8,7 +7,7 @@ optgroup,
 select,
 textarea {
   font-family: Roboto, serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: primary;
+  color: var(--primaryColor);
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -20,10 +19,10 @@ html {
 body {
   margin: 0;
   padding: 2rem;
-  background: background;
+  background: var(--backgroundColor);
 }
 
 ::selection {
-  background: primary;
-  color: primary-inverted;
+  background: var(--primaryColor);
+  color: var(--primaryInvertedColor);
 }

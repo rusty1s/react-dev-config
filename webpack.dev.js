@@ -25,7 +25,7 @@ module.exports = {
             options: {
               modules: true,
               sourceMap: true,
-              localIdentName: '[name]__[local]_[hash:base64:2]',
+              localIdentName: '[name]__[local]_[hash:base64:5]',
               // That many loaders after the css-loader are used to import
               // resources.
               importLoaders: 1,

@@ -1,0 +1,8 @@
+:root {
+  --primaryColor: #5b5b5b;
+  --primaryInvertedColor: #fff;
+  --secondaryColor: #a4224a;
+  --secondaryLightColor: color(var(--secondaryColor) blackness(20%));
+  --secondaryDarkColor: color(var(--secondaryColor) whiteness(20%));
+  --backgroundColor: #f0f2eb;
+}

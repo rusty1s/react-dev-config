@@ -8,7 +8,7 @@ import styles from './App.css';
 
 class App extends Component {
   state = {
-    counter: 0,
+    counter: 1,
   }
 
   handleClick = () => {
@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.layout}>
         <Title text="Hello, World!" />
         <img src={logo} alt="logo" className={styles.logo} />
         <p>This is a simple, basic React demo!</p>
