@@ -78,7 +78,7 @@ It includes:
 
 You can use the start configuration simply by running
 
-```bash
+```shell
 npm install react-dev-config --save-dev
 ```
 
@@ -155,7 +155,7 @@ and `webpack.prod`.
 If you want to customize a configuration, create a file called like the one
 from above in a `config` folder in your root directory:
 
-```bash
+```shell
 cd project
 mkdir config
 touch config/babelrc.js
@@ -167,7 +167,7 @@ create a new one by yourself.
 If you want to extend or change a configuration, put something like this in
 your newly created file:
 
-```js
+```javascript
 // config/babelrc.js
 const babelrc = module.exports = require('react-dev-config/babelrc');
 
@@ -179,7 +179,7 @@ babelrc.plugins.push('transform-react-constant-elements');
 
 Don't forget to install the babel plugin by yourself:
 
-```bash
+```shell
 npm install babel-plugin-transform-react-constant-elements --save-dev
 ```
 
