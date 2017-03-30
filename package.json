@@ -106,6 +106,7 @@
     "npm-run-all": "^4.0.1",
     "postcss-cssnext": "^2.9.0",
     "postcss-font-magician": "^1.5.0",
+    "postcss-import": "^9.1.0",
     "postcss-loader": "^1.1.1",
     "react-addons-test-utils": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
@@ -131,7 +132,6 @@
     "testRegex": "\\.test\\.jsx?$"
   },
   "devDependencies": {
-    "postcss-import": "^9.1.0",
     "pre-commit": "^1.2.2",
     "pre-push": "^0.1.1"
   }
