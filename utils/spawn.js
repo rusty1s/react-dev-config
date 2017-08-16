@@ -7,7 +7,7 @@ const crossSpawn = require('cross-spawn');
 // arguments.
 module.exports = function spawn(prg, prgArgs, nodeArgs, prgBin) {
   // Find the prg in the node_modules folder.
-  const modulePath = path.join(process.cwd(), 'node_modules', prg);
+  let modulePath = path.join(process.cwd(), 'node_modules', prg);
 
   // Allow symlinking of `react-dev-config`
   if (!fs.existsSync(modulePath)) {
