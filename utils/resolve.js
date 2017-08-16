@@ -3,9 +3,7 @@ const fs = require('fs');
 
 const moduleName = require('../package.json').name;
 
-/**
- * Resolve absolute path from base dir.
- **/
+// Resolve absolute path from base dir.
 module.exports = function resolveConfig(name) {
   const cwd = process.cwd();
 

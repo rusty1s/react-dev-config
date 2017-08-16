@@ -2,10 +2,8 @@ const path = require('path');
 
 const crossSpawn = require('cross-spawn');
 
-/**
- * Spawns a child process from the ./node_modules/.bin directory with specific
- * arguments.
- **/
+// Spawns a child process from the ./node_modules/.bin directory with specific
+// arguments.
 module.exports = function spawn(prg, prgArgs, nodeArgs, prgBin) {
   // Find the prg in the node_modules folder.
   const modulePath = path.join(process.cwd(), 'node_modules', prg);
