@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const crossSpawn = require('cross-spawn');
 
@@ -6,7 +7,13 @@ const crossSpawn = require('cross-spawn');
 // arguments.
 module.exports = function spawn(prg, prgArgs, nodeArgs, prgBin) {
   // Find the prg in the node_modules folder.
-  const modulePath = path.join(process.cwd(), 'node_modules', prg);
+  let modulePath = path.join(process.cwd(), 'node_modules', prg);
+
+  // Allow symlinking of `react-dev-config`
+  if (!fs.existsSync(modulePath)) {
+    modulePath = path.join(process.cwd(), 'node_modules', 'react-dev-config', 'node_modules', prg);
+  }
+
   const moduleBins = require(path.join(modulePath, 'package.json')).bin;
 
   // `pkgBin` is either a dictionary or a string.
