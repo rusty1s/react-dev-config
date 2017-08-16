@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Allow symlinking of `react-dev-config`
 let transform = path.join(process.cwd(), 'node_modules', 'jest-css-modules');
 if (fs.existsSync(transform)) {
   transform = '<rootDir>/node_modules/jest-css-modules';
