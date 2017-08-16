@@ -4,8 +4,7 @@ const path = require('path');
 let transform = path.join(process.cwd(), 'node_modules', 'jest-css-modules');
 if (fs.existsSync(transform)) {
   transform = '<rootDir>/node_modules/jest-css-modules';
-}
-else {
+} else {
   transform = '<rootDir>/node_modules/react-dev-config/node_modules/jest-css-modules';
 }
 
