@@ -1,5 +1,8 @@
 module.exports = {
-  presets: [['es2015', { modules: false }], 'react'],
+  presets: [
+    ['es2015', { modules: false }],
+    'react',
+  ],
   plugins: [
     // Helper for common functions such as `_extend` should be added only once.
     // https://babeljs.io/docs/plugins/transform-runtime/
