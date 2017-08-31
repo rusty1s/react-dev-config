@@ -88,7 +88,6 @@ and adding the `react-dev-config` scripts to your `package.json`:
   "lint:js": "react-dev-config lint js",
   "lint:js:fix": "npm run lint:js -- --fix",
   "lint:css": "react-dev-config lint css",
-  "lint": "npm-run-all lint:*",
   "start": "react-dev-config start",
   "watch": "react-dev-config watch",
   "build": "react-dev-config build",
