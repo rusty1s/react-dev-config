@@ -10,9 +10,7 @@ const postcss = require(resolve('postcss.js'));
 const stylelintignore = require(resolve('stylelintignore.js'));
 
 module.exports = {
-  entry: [
-    './src/index.jsx',
-  ],
+  entry: ['./src/index.jsx'],
   resolve: {
     extensions: ['*', '.js', '.jsx', '.es6', '.css', '.json'],
   },
@@ -44,7 +42,7 @@ module.exports = {
         enforce: 'pre',
         test: /\.jsx?$|\.es6$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',  // needs to be a loader, not use
+        loader: 'eslint-loader', // needs to be a loader, not use
         options: {
           configFile: resolve('eslintrc.js'),
         },
@@ -60,7 +58,7 @@ module.exports = {
       },
       {
         exclude: [
-          /\.html?$/,   // needed for HtmlWebpackPlugin to work
+          /\.html?$/, // needed for HtmlWebpackPlugin to work
           /\.jsx?$/,
           /\.es6$/,
           /\.css$/,

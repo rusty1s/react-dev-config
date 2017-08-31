@@ -115,7 +115,6 @@
     "stylelint-config-css-modules": "^0.1.0",
     "stylelint-config-standard": "^16.0.0",
     "stylelint-webpack-plugin": "^0.5.1",
-    "svn-modules": "^0.1.8",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"

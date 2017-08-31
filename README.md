@@ -72,7 +72,6 @@ It includes:
 * **CSS Modules** and **PostCSS** (`postcss-cssnext` and
   `postcss-font-magician`)
 * A build script to bundle JS, CSS and other files for production
-* Downloading private SVN modules via `svn-modules` (if needed)
 
 ## Getting Started
 
@@ -86,8 +85,6 @@ and adding the `react-dev-config` scripts to your `package.json`:
 
 ```json
 "scripts": {
-  "postinstall": "react-dev-config svn install",
-  "preuninstall": "react-dev-config svn uninstall",
   "lint:js": "react-dev-config lint js",
   "lint:js:fix": "npm run lint:js -- --fix",
   "lint:css": "react-dev-config lint css",
@@ -102,12 +99,6 @@ and adding the `react-dev-config` scripts to your `package.json`:
 ```
 
 You can find a working demo in the `demo` folder.
-
-### `react-dev-config svn install|uninstall`
-
-Downloads and installs additional private SVN modules via
-[svn-modules](https://github.com/ewrogers/svn-modules).
-Only add these if you need them.
 
 ### `react-dev-config lint js|css [--fix]`
 
