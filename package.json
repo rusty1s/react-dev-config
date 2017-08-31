@@ -56,21 +56,18 @@
     "npm": ">=3"
   },
   "scripts": {
-    "lint": "eslint --config eslintrc.js --ignore-path .gitignore --cache --ext .js --ext .jsx .",
+    "lint":
+      "eslint --config eslintrc.js --ignore-path .gitignore --cache --ext .js --ext .jsx .",
     "test": "jest --coverage",
     "demo:install": "cd demo && npm install",
     "demo:uninstall": "cd demo && npm uninstall",
-    "demo:lint": "cd demo && npm run lint",
+    "demo:lint": "cd demo && npm run lint:js && npm run lint:css",
     "demo:test": "cd demo && npm test",
     "demo:build": "cd demo && npm run build",
     "demo:transpile": "cd demo && npm run transpile"
   },
-  "pre-commit": [
-    "test"
-  ],
-  "pre-push": [
-    "lint"
-  ],
+  "pre-commit": ["test"],
+  "pre-push": ["lint"],
   "dependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.18.2",
@@ -124,10 +121,7 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "node_modules",
-      "demo"
-    ],
+    "testPathIgnorePatterns": ["node_modules", "demo"],
     "testRegex": "\\.test\\.jsx?$"
   },
   "devDependencies": {
